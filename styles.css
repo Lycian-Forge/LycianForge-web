@@ -11,6 +11,7 @@ button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
+    background-color: #0400dd;
 }
 
 .popup {
@@ -26,7 +27,7 @@ button {
 }
 
 .popup-content {
-    background-color: white;
+    background-color: rgb(0, 255, 136);
     padding: 20px;
     border-radius: 5px;
     text-align: center;
