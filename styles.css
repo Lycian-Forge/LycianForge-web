@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Roboto', sans-serif; /* Apply Roboto font */
-    background: linear-gradient(45deg, #2dd7d1, #ffa65c);
+    background: linear-gradient(45deg, #f8f8f8, #a3a2a2);
     color: #333;
     display: flex;
     flex-direction: column;
@@ -20,7 +20,7 @@ a {
 }
 
 header, footer {
-    background: linear-gradient(90deg, rgb(45, 215, 209), #ffa65c);
+    background: linear-gradient(45deg, #e2e2e2, #838383);
     color: white;
     padding: 20px 0;
     position: relative; /* Necessary for positioning the pseudo-element */
@@ -63,7 +63,7 @@ header .logo-img {
 header .logo-text {
     font-size: 32px;
     font-weight: bold;
-    background: linear-gradient(90deg, #ff7f00, #ff4d00, #ffcc00); /* Original gradient effect */
+    background: linear-gradient(90deg, #111111, #744d3c, #ca7e0d); /* Original gradient effect */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -74,7 +74,7 @@ header .logo-text {
 /* Hover effect for logo container */
 .logo:hover .logo-text,
 .logo:hover img {
-    background: linear-gradient(90deg, #f5a14c, #f37945, #ffdf5f); /* Original gradient effect */
+    background: linear-gradient(90deg, #333333, #a36e55, #da880e); /* Original gradient effect */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -83,14 +83,17 @@ header .logo-text {
 
 /* Hover effect for the logo image (optional) */
 .logo:hover img {
-    opacity: 0.9; /* Slightly change opacity on hover for effect */
+    opacity: 0.8; /* Slightly change opacity on hover for effect */
 }
 
 
 .menu {
-    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
     line-height: 1.6;
-    color: #000000;
+    color: #ac5c00;
     width: fit-content;
     display: flex;
     list-style: none;
@@ -143,15 +146,25 @@ header .logo-text {
 
 /* Submenu styles */
 .menu .item .submenu {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: absolute;
+    color: #f5f5f5;
     top: 100%; /* Position it directly below the menu item */
     left: 0;
     width: 100%;
     overflow: hidden;
     border: 1px solid #cccccc;
+    border-radius: 5%;
+    border-bottom: transparent;
+    border-left: transparent;
+    border-top-width: 3px;
+    border-right-width: 2px;
+    border-color: #d3d3d3;
     opacity: 0;
     visibility: hidden;
     transform: translateY(-12px);
@@ -166,9 +179,8 @@ header .logo-text {
     visibility: visible;
     transform: translateY(0);
     pointer-events: auto; /* Enable interaction when visible */
-    background: linear-gradient(180deg, rgba(15, 251, 255, 0.808) 0%, rgba(39, 187, 200, 0.801) 64%, rgba(0, 85, 255, 0.678) 100%);
-    border-top: transparent;
-    border-color: #915200dc;
+    background-color: #000000ad;
+
 }
 
 /* Keep the submenu open when hovering over it */
@@ -308,6 +320,7 @@ footer .social-icon:hover {
 
 footer .copyright {
     font-size: 14px;
+    color: #000000;
 }
 
 /* Responsive Styles */
