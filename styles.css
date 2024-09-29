@@ -1,121 +1,187 @@
 /* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
+    background: linear-gradient(45deg, #2dd7d1, #ffa65c);
     color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-h1, h2, h3 {
-    margin: 0;
-    padding: 0;
+a {
+    text-decoration: none;
+    color: #fff;
 }
 
-/* Header */
-header {
-    background-color: #003366; /* Dark blue */
+header, footer {
+    background: linear-gradient(90deg, #2dd7d1, #ffa65c);
     color: white;
-    padding: 20px;
-    text-align: center;
+    padding: 20px 0;
 }
 
-header .logo h1 {
-    font-size: 2.5rem;
+header .container, footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
 }
 
+/* Logo Styling */
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    background-color: #eee; /* Placeholder background */
+}
+
+header .logo-text {
+    font-size: 32px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #ffa500, #ff5e00, #00c3ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+/* Navigation Styles */
 nav ul {
     list-style: none;
-    padding: 0;
-    margin: 20px 0 0 0;
     display: flex;
-    justify-content: center;
 }
 
 nav ul li {
+    position: relative;
     margin: 0 15px;
 }
 
 nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
+nav ul li a:hover, nav ul li a:focus {
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
-/* Hero Section */
-.hero-section {
-    background-color: #336699; /* Medium blue */
-    color: white;
-    padding: 100px 20px;
+/* Dropdown Styling */
+nav ul .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #2dd7d1;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 10;
+    min-width: 150px;
+    max-width: 200px;
+    white-space: normal;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+nav ul li:hover .dropdown,
+nav ul li:focus-within .dropdown {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+nav ul .dropdown li {
+    margin: 5px 0;
+}
+
+nav ul .dropdown li a {
+    white-space: normal;
+    word-wrap: break-word;
+    padding: 10px;
+    display: block;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    transition: background-color 0.2s ease;
+}
+
+nav ul .dropdown li a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
-.hero-section h2 {
-    font-size: 2.2rem;
-    margin-bottom: 10px;
-}
-
-.hero-section p {
-    font-size: 1.2rem;
-}
-
-/* About Section */
-.about-section {
-    background-color: #ff9933; /* Orange */
-    color: white;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.about-section h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-/* Games Section */
-.games-section {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.games-section h2 {
-    font-size: 2rem;
-    color: #003366; /* Dark blue */
-    margin-bottom: 40px;
-}
-
-.game {
-    background-color: #ffcc99; /* Light orange */
+.placeholder-content {
     padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
 }
 
-.game h3 {
-    color: #003366; /* Dark blue */
+/* Footer Styling */
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* Contact Section */
-.contact-section {
-    background-color: #003366; /* Dark blue */
-    color: white;
-    padding: 60px 20px;
-    text-align: center;
+footer .socials {
+    display: flex;
+    gap: 15px;
 }
 
-.contact-section h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+footer .socials a {
+    display: block;
 }
 
-/* Footer */
-footer {
-    background-color: #336699; /* Medium blue */
-    color: white;
-    text-align: center;
-    padding: 20px 0;
+footer .social-icon {
+    width: 30px; /* Size of social media icons */
+    height: 30px;
+    transition: transform 0.2s ease;
+}
+
+footer .social-icon:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+footer .copyright {
+    font-size: 14px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        padding: 10px 30px;
+    }
+
+    footer .socials {
+        justify-content: flex-end; /* Socials stay on the right */
+    }
 }
