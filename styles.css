@@ -20,7 +20,7 @@ a {
 }
 
 header, footer {
-    background: linear-gradient(90deg, #2dd7d1, #ffa65c);
+    background: linear-gradient(90deg, rgb(45, 215, 209), #ffa65c);
     color: white;
     padding: 20px 0;
     position: relative; /* Necessary for positioning the pseudo-element */
@@ -59,81 +59,182 @@ header .logo-img {
     background-color: #eee; /* Placeholder background */
 }
 
+/* Original text styles */
 header .logo-text {
     font-size: 32px;
     font-weight: bold;
-    background: linear-gradient(90deg, #ff7f00, #ff4d00, #ffcc00); /* Updated gradient to only orange tones */
+    background: linear-gradient(90deg, #ff7f00, #ff4d00, #ffcc00); /* Original gradient effect */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    transition: background 0.3s ease; /* Smooth transition for background */
+}
+
+/* Hover effect for logo container */
+.logo:hover .logo-text,
+.logo:hover img {
+    background: linear-gradient(90deg, #f5a14c, #f37945, #ffdf5f); /* Original gradient effect */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
 }
 
-/* Navigation Styles */
-nav ul {
-    list-style: none;
+/* Hover effect for the logo image (optional) */
+.logo:hover img {
+    opacity: 0.9; /* Slightly change opacity on hover for effect */
+}
+
+
+.menu {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #000000;
+    width: fit-content;
     display: flex;
-}
-
-nav ul li {
+    list-style: none;
+  }
+  
+  .menu a {
+    text-decoration: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+  }
+  
+  .menu .link {
     position: relative;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    padding: 10px 20px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    transition: background-color 0.3s ease;
-    cursor: pointer;
-}
-
-nav ul li a:hover, nav ul li a:focus {
-    background-color: rgba(255, 255, 255, 0.3);
-}
-
-/* Dropdown Styling */
-nav ul .dropdown {
-    display: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 12px 36px;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .menu .link::after {
+    content: "";
     position: absolute;
-    top: 100%;
+    top: 0;
     left: 0;
-    background-color: #2dd7d1;
-    padding: 10px;
-    border-radius: 10px;
-    z-index: 10;
-    min-width: 150px;
-    max-width: 200px;
-    white-space: normal;
+    width: 100%;
+    height: 100%;
+    background-color: #0a3cff;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .menu .link svg {
+    width: 14px;
+    height: 14px;
+    fill: #000000;
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .menu .item {
+    position: relative;
+}
+
+/* Submenu styles */
+.menu .item .submenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 100%; /* Position it directly below the menu item */
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid #cccccc;
     opacity: 0;
-    transform: translateY(-10px);
-    transition: all 0.3s ease;
+    visibility: hidden;
+    transform: translateY(-12px);
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+    z-index: 9999;
+    pointer-events: none; /* Prevent interaction when not visible */
 }
 
-nav ul li:hover .dropdown,
-nav ul li:focus-within .dropdown {
-    display: block;
+/* Show the submenu on hover of the item */
+.menu .item:hover .submenu {
     opacity: 1;
+    visibility: visible;
     transform: translateY(0);
+    pointer-events: auto; /* Enable interaction when visible */
+    background: linear-gradient(180deg, rgba(15, 251, 255, 0.808) 0%, rgba(39, 187, 200, 0.801) 64%, rgba(0, 85, 255, 0.678) 100%);
+    border-top: transparent;
+    border-color: #915200dc;
 }
 
-nav ul .dropdown li {
-    margin: 5px 0;
+/* Keep the submenu open when hovering over it */
+.menu .item:hover .submenu:hover {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
 }
-
-nav ul .dropdown li a {
-    white-space: normal;
-    word-wrap: break-word;
-    padding: 10px;
+  
+  .menu .item:hover .link {
+    color: #ffffff;
+    border-radius: 16px 16px 0 0;
+  }
+  
+  .menu .item:hover .link::after {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+  
+  .menu .item:hover .link svg {
+    fill: #ffffff;
+    transform: rotate(-180deg);
+  }
+  
+  .submenu .submenu-item {
+    width: 100%;
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .submenu .submenu-link {
     display: block;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    transition: background-color 0.2s ease;
-}
+    padding: 12px 24px;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .submenu .submenu-item:last-child .submenu-link {
+    border-bottom: none;
+  }
+  
+  .submenu .submenu-link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    width: 100%;
+    height: 100%;
+    background-color: #ff8e23;
+    z-index: -1;
+    transform-origin: left;
+    transition: transform 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .submenu .submenu-link:hover:before {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+  
+  .submenu .submenu-link:hover {
+    color: #ffffff;
+  }
 
-nav ul .dropdown li a:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-}
+
 
 main {
     flex-grow: 1;
