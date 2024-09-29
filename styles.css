@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif; /* Apply Roboto font */
     background: linear-gradient(45deg, #2dd7d1, #ffa65c);
     color: #333;
     display: flex;
@@ -23,6 +23,18 @@ header, footer {
     background: linear-gradient(90deg, #2dd7d1, #ffa65c);
     color: white;
     padding: 20px 0;
+    position: relative; /* Necessary for positioning the pseudo-element */
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 7px; /* Height of the border */
+    background: linear-gradient(to bottom, rgba(255, 165, 0, 1), rgba(255, 165, 0, 0));
+    z-index: 1; /* Ensure the border stays below other header elements */
 }
 
 header .container, footer .container {
@@ -50,7 +62,7 @@ header .logo-img {
 header .logo-text {
     font-size: 32px;
     font-weight: bold;
-    background: linear-gradient(90deg, #ffa500, #ff5e00, #00c3ff);
+    background: linear-gradient(90deg, #ff7f00, #ff4d00, #ffcc00); /* Updated gradient to only orange tones */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -132,9 +144,39 @@ main {
 }
 
 .placeholder-content {
-    padding: 20px;
+    padding: 40px;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.placeholder-content h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.placeholder-content p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.email-container {
+    margin-top: 20px; /* Add space above the email addresses */
+}
+
+.email {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.email a {
+    color: #ff7f00; /* Orange color for email addresses */
+    transition: color 0.3s ease;
+}
+
+.email a:hover {
+    color: #ffcc00; /* Lighter orange on hover */
 }
 
 /* Footer Styling */
