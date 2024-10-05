@@ -63,7 +63,7 @@ header .logo-img {
 header .logo-text {
     font-size: 32px;
     font-weight: bold;
-    background: linear-gradient(90deg, #111111, #744d3c, #ca7e0d); /* Original gradient effect */
+    background: linear-gradient(90deg,#3dddba, #0066ff, #ca7e0d); /* Original gradient effect */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -74,7 +74,7 @@ header .logo-text {
 /* Hover effect for logo container */
 .logo:hover .logo-text,
 .logo:hover img {
-    background: linear-gradient(90deg, #333333, #a36e55, #da880e); /* Original gradient effect */
+    background: linear-gradient(90deg, #80fce1, #508de9, #f79400); /* Original gradient effect */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
