@@ -679,16 +679,21 @@ header.after {
     .team-grid {
       padding: 15px 0;
       gap: .5rem;
+      flex-wrap: wrap; /* Allow wrapping of items */
     }
   
     .team-card {
       flex: 0 0 100px;
       height: 125px;
+      
     }
 
     .rainbow-border {
       border: 1px solid transparent;
       padding: 4px;
+    }
+    .team-grid > .team-card {
+      flex-basis: calc(50% - 1.5rem); /* Ensures 2 items per row with gap between them */
     }
     
     .card-overlay h3 {
