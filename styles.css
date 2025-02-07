@@ -362,6 +362,7 @@ header.after {
   .team {
     padding: 100px 0;
     text-align: center;
+    background-color: #080808;
   }
   
   .team h2 {
@@ -399,29 +400,32 @@ header.after {
     animation: rainbow-shift 5s linear infinite;
   }
 
-
   @keyframes rainbow-shift {
     0% {
-      background-image: linear-gradient(45deg, #ff7e5f, #feb47b, #ffcc70, #f6b93b, #00b894, #8e44ad, #6c5ce7),
-                        linear-gradient(45deg, #ff7e5f, #feb47b, #ffcc70, #f6b93b, #00b894, #8e44ad, #6c5ce7);
+      background-image: linear-gradient(45deg, #6a1b1a, #8e3b2b, #a63a2b, #c65f2f, #9e2a1f, #b54f28, #c4572b),
+                        linear-gradient(45deg, #6a1b1a, #8e3b2b, #a63a2b, #c65f2f, #9e2a1f, #b54f28, #c4572b);
     }
     25% {
-      background-image: linear-gradient(45deg, #feb47b, #ffcc70, #f6b93b, #00b894, #8e44ad, #6c5ce7, #ff7e5f),
-                        linear-gradient(45deg, #feb47b, #ffcc70, #f6b93b, #00b894, #8e44ad, #6c5ce7, #ff7e5f);
+      background-image: linear-gradient(45deg, #8e3b2b, #a63a2b, #c65f2f, #9e2a1f, #b54f28, #c4572b, #6a1b1a),
+                        linear-gradient(45deg, #8e3b2b, #a63a2b, #c65f2f, #9e2a1f, #b54f28, #c4572b, #6a1b1a);
     }
     50% {
-      background-image: linear-gradient(45deg, #ffcc70, #f6b93b, #00b894, #8e44ad, #6c5ce7, #ff7e5f, #feb47b),
-                        linear-gradient(45deg, #ffcc70, #f6b93b, #00b894, #8e44ad, #6c5ce7, #ff7e5f, #feb47b);
+      background-image: linear-gradient(45deg, #a63a2b, #c65f2f, #9e2a1f, #b54f28, #c4572b, #6a1b1a, #8e3b2b),
+                        linear-gradient(45deg, #a63a2b, #c65f2f, #9e2a1f, #b54f28, #c4572b, #6a1b1a, #8e3b2b);
     }
     75% {
-      background-image: linear-gradient(45deg, #f6b93b, #00b894, #8e44ad, #6c5ce7, #ff7e5f, #feb47b, #ffcc70),
-                        linear-gradient(45deg, #f6b93b, #00b894, #8e44ad, #6c5ce7, #ff7e5f, #feb47b, #ffcc70);
+      background-image: linear-gradient(45deg, #c65f2f, #9e2a1f, #b54f28, #c4572b, #6a1b1a, #8e3b2b, #a63a2b),
+                        linear-gradient(45deg, #c65f2f, #9e2a1f, #b54f28, #c4572b, #6a1b1a, #8e3b2b, #a63a2b);
     }
     100% {
-      background-image: linear-gradient(45deg, #00b894, #8e44ad, #6c5ce7, #ff7e5f, #feb47b, #ffcc70, #f6b93b),
-                        linear-gradient(45deg, #00b894, #8e44ad, #6c5ce7, #ff7e5f, #feb47b, #ffcc70, #f6b93b);
+      background-image: linear-gradient(45deg, #9e2a1f, #b54f28, #c4572b, #6a1b1a, #8e3b2b, #a63a2b, #c65f2f),
+                        linear-gradient(45deg, #9e2a1f, #b54f28, #c4572b, #6a1b1a, #8e3b2b, #a63a2b, #c65f2f);
     }
   }
+  
+  
+  
+
   
   
 
@@ -667,13 +671,21 @@ header.after {
     header .menu {
       display: none;
     }
+
+    .loader {
+      --cell-size: 100px;
+      --cell-spacing: 5px;
+      --cells: 3;
+      width: var(--total-size);
+      height: var(--total-size);
+    }
   
     .hero h1 {
-      font-size: 2.5rem;
+      font-size: 2.2rem;
     }
   
     .hero p {
-      font-size: 1.2rem;
+      font-size: .9rem;
     }
   
     .team-grid {
@@ -687,6 +699,19 @@ header.after {
       height: 125px;
       
     }
+
+    .game-card h1 {
+      font-size: 25px;
+    }
+
+    .game-card p {
+      font-size: 15px;
+    }
+
+    .job-listings {
+      flex-wrap: wrap;
+    }
+    
 
     .rainbow-border {
       border: 1px solid transparent;
@@ -711,6 +736,7 @@ header.after {
     .card-back{
       width: 75%;
       height: 75%;
+
     }
     
     .card-back h3 {
