@@ -388,7 +388,43 @@ header.after {
     z-index: 1; /* Ensure cards stay below header */
     perspective: 1000px;
   }
+  .rainbow-border {
+    position: relative;
+    padding: 10px;
+    border: 8px solid transparent;
+    background-image: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet), 
+                      linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    animation: rainbow-shift 5s linear infinite;
+  }
+
+
+  @keyframes rainbow-shift {
+    0% {
+      background-image: linear-gradient(45deg, #ff7e5f, #feb47b, #ffcc70, #f6b93b, #00b894, #8e44ad, #6c5ce7),
+                        linear-gradient(45deg, #ff7e5f, #feb47b, #ffcc70, #f6b93b, #00b894, #8e44ad, #6c5ce7);
+    }
+    25% {
+      background-image: linear-gradient(45deg, #feb47b, #ffcc70, #f6b93b, #00b894, #8e44ad, #6c5ce7, #ff7e5f),
+                        linear-gradient(45deg, #feb47b, #ffcc70, #f6b93b, #00b894, #8e44ad, #6c5ce7, #ff7e5f);
+    }
+    50% {
+      background-image: linear-gradient(45deg, #ffcc70, #f6b93b, #00b894, #8e44ad, #6c5ce7, #ff7e5f, #feb47b),
+                        linear-gradient(45deg, #ffcc70, #f6b93b, #00b894, #8e44ad, #6c5ce7, #ff7e5f, #feb47b);
+    }
+    75% {
+      background-image: linear-gradient(45deg, #f6b93b, #00b894, #8e44ad, #6c5ce7, #ff7e5f, #feb47b, #ffcc70),
+                        linear-gradient(45deg, #f6b93b, #00b894, #8e44ad, #6c5ce7, #ff7e5f, #feb47b, #ffcc70);
+    }
+    100% {
+      background-image: linear-gradient(45deg, #00b894, #8e44ad, #6c5ce7, #ff7e5f, #feb47b, #ffcc70, #f6b93b),
+                        linear-gradient(45deg, #00b894, #8e44ad, #6c5ce7, #ff7e5f, #feb47b, #ffcc70, #f6b93b);
+    }
+  }
   
+  
+
   .card-inner {
     position: relative;
     width: 100%;
@@ -640,18 +676,56 @@ header.after {
       font-size: 1.2rem;
     }
   
-    .game-grid {
-      grid-template-columns: 1fr;
+    .team-grid {
+      padding: 15px 0;
+      gap: .5rem;
     }
   
     .team-card {
-      flex: 0 0 250px;
-      height: 350px;
+      flex: 0 0 100px;
+      height: 125px;
     }
-  
-    .game-card {
-      aspect-ratio: 9/16;
+
+    .rainbow-border {
+      border: 1px solid transparent;
+      padding: 4px;
     }
+    
+    .card-overlay h3 {
+      font-size: .6rem;
+      margin: 0;
+      line-height: 1.1;
+    }
+    
+    .card-overlay span {
+      font-size: .5rem;
+      font-weight: 400;
+      color: #ff6f61;
+    }
+
+    .card-back{
+      width: 75%;
+      height: 75%;
+    }
+    
+    .card-back h3 {
+      font-size: .6rem;
+      margin-bottom: 5px;
+    }
+    
+    .card-back p {
+      font-size: .5rem;
+      color: #aaa;
+      margin-bottom: 7px;
+    }
+    
+    .card-back .social-links a {
+      color: #fff;
+      margin: 0 6px;
+      font-size: .4rem;
+      transition: color 0.3s ease;
+    }
+
   }
   
   /* Hide scrollbar for cleaner look */
