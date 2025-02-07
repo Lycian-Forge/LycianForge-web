@@ -148,13 +148,19 @@ body {
     
     margin: 0 auto;
   }
+
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   
   header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 80px; /* Set fixed height */
+    height: 50px; /* Set fixed height */
     padding: 15px 30px;
     z-index: 1000;
     background: rgba(26, 26, 26, 0.95);
@@ -163,6 +169,10 @@ body {
 
 header.after {
   position: fixed;
+}
+
+header .hamburger {
+  display: none;
 }
 
 
@@ -668,9 +678,77 @@ header.after {
   
   /* Responsive Design */
   @media (max-width: 768px) {
-    header .menu {
-      display: none;
-    }
+      /* Style the Hamburger Button */
+      header .hamburger {
+        display: block;
+        font-size: 2rem;
+        background: none;
+        border: none;
+        color: #b22222;
+        cursor: pointer;
+        position: flex;
+        top: 10px;
+        left: 10px;
+        z-index: 10;
+      }
+
+      /* Default Hidden Menu */
+      header .menu {
+        display: none; /* Hidden initially */
+      }
+
+      /* Show Menu When Active */
+      header .menu.active {
+        display: flex;
+        flex-direction: column; /* Stack items */
+        position: absolute;
+        top: 60px; /* Position right under the button */
+        right: 40px; /* Align with button */
+        background: rgba(26, 26, 26, 0.95);
+        width: 200px; /* Set width */
+        padding: 10px 0;
+        list-style: none;
+        border: #c0b6b6;
+        border-width: 25px;
+        border-radius: 8px;
+        box-shadow: #080808;
+      }
+      
+
+
+      /* Menu Links */
+      .menu li {
+        padding: 10px 0;
+        text-align: center;
+      }
+
+      .menu a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.2rem;
+      }
+
+        /* Dropdown Styling */
+        .dropdown {
+          position: relative; /* Ensure the parent is positioned */
+          overflow-x: none;
+        }
+
+        .dropdown-content {
+          display: none;
+          position: absolute; /* Absolute positioning allows movement */
+          background-color: rgba(26, 26, 26, 0.95);
+          top: 100%;
+          left: -100px;/* Move it further to the left */
+          width: auto;
+          min-width: 150px;
+          z-index: 100; /* Ensure it appears above other elements */
+        }
+
+        /* Show dropdown when hovering */
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
 
     .loader {
       --cell-size: 100px;
@@ -757,7 +835,19 @@ header.after {
       transition: color 0.3s ease;
     }
 
-  }
+    
+  
+    header .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+
+
+}
+
   
   /* Hide scrollbar for cleaner look */
   .team-grid::-webkit-scrollbar {
