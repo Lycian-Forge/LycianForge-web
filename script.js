@@ -4,12 +4,32 @@ AOS.init({
     once: true,
     easing: 'ease-in-out-quad'
   });
-  
-  // Header Scroll Effect
-  window.addEventListener('scroll', () => {
-    const header = document.querySelector('header');
-    header.style.background = window.scrollY > 50 ? 'rgba(10,10,10,0.98)' : 'rgba(26,26,26,0.95)';
-  });
+
+
+
+  window.addEventListener("scroll", () => {
+    const header = document.querySelector("header");
+    const sections = document.querySelectorAll("section"); // Assuming your sections are inside <section> tags
+    let scrollPosition = window.scrollY;
+    
+    if (window.scrollY === 0) {
+      header.style.backgroundColor = 'rgba(26, 26, 26, 0.95)';
+    }
+    else {
+      sections.forEach((section) => {
+        let sectionTop = section.offsetTop - header.offsetHeight;
+        let sectionBottom = sectionTop + section.offsetHeight;
+
+        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+            let bgColor = window.getComputedStyle(section).backgroundColor;
+            header.style.backgroundColor = bgColor;
+        }
+
+    });
+    }
+
+
+});
   
   // Card Tilt Effect
   document.querySelectorAll('.team-card').forEach(card => {
@@ -54,3 +74,36 @@ AOS.init({
     }, 1000);
   });
 
+
+  document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    let name = document.getElementById('name').value;
+    let email = document.getElementById('email').value;
+    let message = document.getElementById('message').value;
+    let statusMessage = document.getElementById('formStatus');
+
+    fetch("https://formspree.io/f/xwpvqqrn", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ name, email, message })
+    })
+    .then(response => {
+        if (response.ok) {
+            statusMessage.textContent = "Message Sent! We'll get back to you soon.";
+            statusMessage.classList.remove("hidden");
+            document.getElementById('contactForm').reset();
+        } else {
+            statusMessage.textContent = "Failed to send. Please try again.";
+            statusMessage.style.color = "red";
+            statusMessage.classList.remove("hidden");
+        }
+    })
+    .catch(error => {
+        statusMessage.textContent = "Error sending message.";
+        statusMessage.style.color = "red";
+        statusMessage.classList.remove("hidden");
+    });
+});
