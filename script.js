@@ -45,6 +45,40 @@ AOS.init({
     return bgColor; // Fallback if format is unknown
 }
 
+  let lastHoveredCard = null;
+
+  document.querySelectorAll(".team-card").forEach(card => {
+    let timeout;
+
+    card.addEventListener("mouseenter", () => {
+      clearTimeout(card.dataset.timeoutId); // Prevent premature removal
+      card.classList.add("hovered");
+      card.style.zIndex = "2"; // Bring the hovered card to the front
+
+      if (lastHoveredCard && lastHoveredCard !== card) {
+        lastHoveredCard.style.zIndex = "1"; // Reset previous card’s z-index
+      }
+
+      lastHoveredCard = card; // Update last hovered card
+    });
+
+    card.addEventListener("mouseleave", () => {
+      const timeoutId = setTimeout(() => {
+        card.classList.remove("hovered");
+        if (lastHoveredCard === card) {
+          card.style.zIndex = "1"; // Reset only if it's still the last hovered
+          lastHoveredCard = null;
+        }
+      }, 800);
+
+      card.dataset.timeoutId = timeoutId; // Store timeout ID per card
+    });
+  });
+
+
+
+
+
 
   window.addEventListener("scroll", () => {
     const header = document.querySelector("header");

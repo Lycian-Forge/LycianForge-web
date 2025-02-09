@@ -385,6 +385,7 @@ header .hamburger {
     justify-content: center; /* Centers the cards horizontally */
     align-items: center; /* Centers the cards vertically (if needed) */
     scroll-snap-type: x mandatory;
+    flex-wrap: wrap;
     padding: 15px 0;
     gap: 1.5rem;
     -webkit-overflow-scrolling: touch;
@@ -394,6 +395,7 @@ header .hamburger {
   .team-card {
     flex: 0 0 350px;
     scroll-snap-align: start;
+    position: relative;
     height: 400px;
     margin: 0;
     z-index: 1; /* Ensure cards stay below header */
@@ -451,7 +453,10 @@ header .hamburger {
   .team-card:hover .card-inner {
     transform: rotateY(180deg);
   }
-  
+
+  .team-card.hovered {
+    z-index: 2;
+  }
   .card-front,
   .card-back {
     position: absolute;
@@ -469,12 +474,13 @@ header .hamburger {
   
   .card-back {
     transform: rotateY(180deg);
-    background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
+    background: linear-gradient(45deg, #1a1a1a, #3a3a3a);
     padding: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    
   }
   
   .card-front img {
