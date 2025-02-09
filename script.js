@@ -77,9 +77,9 @@ AOS.init({
             header.style.backgroundColor = 'rgba(26, 26, 26, .2)'; // Keep it same as top
             dropdown.style.backgroundColor = 'rgba(26, 26, 26, .2)';
             if (isMobile) {
-              menu.style.backgroundColor = 'rgba(26, 26, 26, 0.2)';
+              menu.style.backgroundColor = 'rgba(26, 26, 26, 0.0)';
             } else {
-              menu.style.backgroundColor = 'rgba(26, 26, 26, .2)';
+              menu.style.backgroundColor = 'rgba(26, 26, 26, 0)';
             }
             return; // Exit early
         }
