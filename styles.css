@@ -572,7 +572,7 @@ header .hamburger {
 }
 
 .apply-btn:hover {
-  background: #e64a19;
+  background: #a03413;
 }
 
 /* Contact Section */
@@ -598,7 +598,7 @@ header .hamburger {
 }
 
 #contactForm input, #contactForm textarea {
-  width: 100%;
+  width: 95%;
   padding: 12px;
   border: none;
   border-radius: 5px;
@@ -608,23 +608,23 @@ header .hamburger {
 }
 
 #contactForm input:focus, #contactForm textarea:focus {
-  transform: scale(1.02);
+  transform: scale(1.03);
   outline: none;
 }
 
 .send-btn {
   background: #ff5722;
   border: none;
-  width: 106%;
+  width: 101.2%;
   padding: 12px;
   color: white;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
   transition: background 0.3s;
 }
 
 .send-btn:hover {
-  background: #e64a19;
+  background: #a03413;
 }
 
 /* Success Message */
@@ -702,7 +702,7 @@ header .hamburger {
         display: flex;
         flex-direction: column; /* Stack items */
         position: absolute;
-        top: 60px; /* Position right under the button */
+        top: 80px; /* Position right under the button */
         right: 40px; /* Align with button */
         background: rgba(26, 26, 26, 0.95);
         width: 200px; /* Set width */
@@ -710,8 +710,10 @@ header .hamburger {
         list-style: none;
         border: #c0b6b6;
         border-width: 25px;
-        border-radius: 8px;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
         box-shadow: #080808;
+        transition: .5s;
       }
       
 

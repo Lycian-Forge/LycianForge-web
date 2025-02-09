@@ -74,12 +74,12 @@ AOS.init({
         let homeBottom = homeTop + homeSection.offsetHeight;
 
         if (scrollPosition >= homeTop && scrollPosition < homeBottom) {
-            header.style.backgroundColor = 'rgba(26, 26, 26, 0)'; // Keep it same as top
-            dropdown.style.backgroundColor = 'rgba(26, 26, 26, 0)';
+            header.style.backgroundColor = 'rgba(26, 26, 26, .2)'; // Keep it same as top
+            dropdown.style.backgroundColor = 'rgba(26, 26, 26, .2)';
             if (isMobile) {
               menu.style.backgroundColor = 'rgba(26, 26, 26, 0.2)';
             } else {
-              menu.style.backgroundColor = 'rgba(26, 26, 26, 0)';
+              menu.style.backgroundColor = 'rgba(26, 26, 26, .2)';
             }
             return; // Exit early
         }
