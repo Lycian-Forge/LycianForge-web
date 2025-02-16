@@ -58,7 +58,7 @@ AOS.init({
         }
     });
 
-    document.addEventListener("touchstart", function (event) {
+    document.addEventListener("ontouchstart", function (event) {
         const isTouchInsideMenu = menu.contains(event.target);
         const isClickInsideHamburger = hamburgerCheckBox.contains(event.target)
 
