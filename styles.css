@@ -818,7 +818,10 @@ header .hamburger {
         opacity: 0; /* Start with hidden items */
         transform: translateY(-10px); /* Start slightly above */
         animation: fadeInUp 0.5s ease-out forwards; /* Apply animation */
-
+        font-family: "Germania One", serif;
+        font-weight: 400;
+        font-style: normal;
+        
       }
 
             /* Reverse animation for closing */
@@ -984,7 +987,11 @@ header .hamburger {
       width: 100%;
     }
 
-
+    .logo {
+      font-family: "Germania One", serif;
+      font-weight: 400;
+      font-style: normal;
+    }
 
 }
 
