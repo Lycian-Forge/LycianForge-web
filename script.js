@@ -36,6 +36,31 @@ AOS.init({
             menu.classList.remove("active");
         });
     });
+
+    // Close the menu if a click or touch happens outside the menu or checkbox
+    document.addEventListener("click", function (event) {
+        const isClickInsideMenu = menu.contains(event.target);
+        const isClickInsideCheckbox = menuCheckbox.contains(event.target);
+
+        if (!isClickInsideMenu && !isClickInsideCheckbox) {
+            // Uncheck the checkbox and trigger closing animation if the click is outside
+            menuCheckbox.checked = false;
+            menu.classList.add("closed");
+            menu.classList.remove("active");
+        }
+    });
+
+    document.addEventListener("touchstart", function (event) {
+        const isTouchInsideMenu = menu.contains(event.target);
+        const isTouchInsideCheckbox = menuCheckbox.contains(event.target);
+
+        if (!isTouchInsideMenu && !isTouchInsideCheckbox) {
+            // Uncheck the checkbox and trigger closing animation if the touch is outside
+            menuCheckbox.checked = false;
+            menu.classList.add("closed");
+            menu.classList.remove("active");
+        }
+    });
 });
 
 document.addEventListener("DOMContentLoaded", function () {
