@@ -45,7 +45,6 @@ AOS.init({
     // Close the menu if a click or touch happens outside the menu or checkbox
     document.addEventListener("click", function (event) {
         const isClickInsideMenu = menu.contains(event.target);
-        const isClickInsideCheckbox = menuCheckbox.contains(event.target);
         const isClickInsideHamburger = hamburgerCheckBox.contains(event.target)
 
         if (!isClickInsideMenu && !isClickInsideHamburger ) {
@@ -61,7 +60,6 @@ AOS.init({
 
     document.addEventListener("touchstart", function (event) {
         const isTouchInsideMenu = menu.contains(event.target);
-        const isTouchInsideCheckbox = menuCheckbox.contains(event.target);
         const isClickInsideHamburger = hamburgerCheckBox.contains(event.target)
 
         if (!isTouchInsideMenu && isClickInsideHamburger) {

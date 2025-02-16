@@ -192,6 +192,7 @@ header .hamburger {
   text-shadow: 2px 2px 5px rgba(178, 34, 34, 0.5); /* Subtle glow */
   letter-spacing: 1px;
   transition: text-shadow 0.3s ease;
+  cursor: default;
 }
 
 /* Hover Effect */
