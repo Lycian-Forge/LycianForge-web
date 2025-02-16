@@ -1,4 +1,16 @@
-<img src="[[https://github.com/favicon.ico](https://github.com/user-attachments/assets/e48938ec-77a6-448e-9c7a-00ed4fff27d8](https://github.com/Lycian-Forge/LycianForge-web/blob/main/Screenshot%202025-02-16%20212806.jpg?raw=true))" width="48">
+<p align="center">
+ <a href="https://imgbb.com/"><img src="https://i.ibb.co/j9PNBRPX/logo256.jpg" alt="logo256" border="0"></a>
+</p>
 
-This is the source code to Lycian Forge's website, you can freely use and edit the website for your needs, all we ask for is give credit when it's due.
+```javascript
+var whatAmI = "This is the source code to Lycian Forge's website";
+var whatToDo = "You can freely use and edit the website for your needs, all we ask for is give credit when it's due."
+```
 
+
+
+
+
+
+---------------------------------------------------------------------------------------------------------
+Lycian Forge 2024 || All rights reserved
