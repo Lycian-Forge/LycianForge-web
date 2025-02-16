@@ -8,6 +8,8 @@ AOS.init({
   document.addEventListener("DOMContentLoaded", function () {
     const menu = document.getElementById("menu");
     const menuCheckbox = document.getElementById("menu-checkbox");
+    const hamburgerCheckBox = document.getElementById("hamburger-btn")
+    ;
 
     if (!menu || !menuCheckbox) {
         console.error("Menu or Checkbox not found!");
@@ -16,14 +18,16 @@ AOS.init({
 
     // Toggle menu visibility based on checkbox state
     menuCheckbox.addEventListener("change", function () {
-        if (this.checked) {
+        if (menuCheckbox.checked) {
             // When the checkbox is checked, show the menu with the animation
             menu.classList.add("active");
             menu.classList.remove("closed");
+            console.error("Menu opened");
         } else {
             // When the checkbox is unchecked, close the menu with the reverse animation
             menu.classList.add("closed");
             menu.classList.remove("active");
+            console.error("Menu closed");
         }
     });
 
@@ -34,6 +38,7 @@ AOS.init({
             menuCheckbox.checked = false;
             menu.classList.add("closed");
             menu.classList.remove("active");
+            console.error("Menu item clicked, menu closed");
         });
     });
 
@@ -41,27 +46,39 @@ AOS.init({
     document.addEventListener("click", function (event) {
         const isClickInsideMenu = menu.contains(event.target);
         const isClickInsideCheckbox = menuCheckbox.contains(event.target);
+        const isClickInsideHamburger = hamburgerCheckBox.contains(event.target)
 
-        if (!isClickInsideMenu && !isClickInsideCheckbox) {
+        if (!isClickInsideMenu && !isClickInsideHamburger ) {
             // Uncheck the checkbox and trigger closing animation if the click is outside
-            menuCheckbox.checked = false;
-            menu.classList.add("closed");
-            menu.classList.remove("active");
+            if (menuCheckbox.checked) {
+                menuCheckbox.checked = false;
+                menu.classList.add("closed");
+                menu.classList.remove("active");
+                console.error("Menu closed from outside click");
+            }
         }
     });
 
     document.addEventListener("touchstart", function (event) {
         const isTouchInsideMenu = menu.contains(event.target);
         const isTouchInsideCheckbox = menuCheckbox.contains(event.target);
+        const isClickInsideHamburger = hamburgerCheckBox.contains(event.target)
 
-        if (!isTouchInsideMenu && !isTouchInsideCheckbox) {
+        if (!isTouchInsideMenu && isClickInsideHamburger) {
             // Uncheck the checkbox and trigger closing animation if the touch is outside
-            menuCheckbox.checked = false;
-            menu.classList.add("closed");
-            menu.classList.remove("active");
+            if (menuCheckbox.checked) {
+                menuCheckbox.checked = false;
+                menu.classList.add("closed");
+                menu.classList.remove("active");
+                console.error("Menu closed from outside touch");
+            }
         }
     });
+
+
 });
+
+
 
 document.addEventListener("DOMContentLoaded", function () {
   const aboutLink = document.querySelector("a[href='#about']");
