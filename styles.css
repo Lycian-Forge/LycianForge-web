@@ -188,7 +188,7 @@ header .hamburger {
     "MORF" 34,
     "SHLN" 48.2;
   text-transform: uppercase;
-  color: #b22222; /* Dark red */
+  color: #f37a59; /* Dark red */
   text-shadow: 2px 2px 5px rgba(178, 34, 34, 0.5); /* Subtle glow */
   letter-spacing: 1px;
   transition: text-shadow 0.3s ease;
@@ -221,7 +221,7 @@ header .hamburger {
   }
   
   header .menu li a {
-    color: #fff;
+    color: #f37a59;
     text-decoration: none;
     font-size: 1.3rem;
     padding: 10px 15px;
@@ -784,6 +784,7 @@ header .hamburger {
       /* Default Hidden Menu */
       header .menu {
         display: none; /* Hidden initially */
+
       }
 
       /* Show Menu When Active */
@@ -804,6 +805,7 @@ header .hamburger {
         border-bottom-right-radius: 8px;
         box-shadow: #080808;
         transition: 1s;
+        
       }
       
 
@@ -816,6 +818,10 @@ header .hamburger {
         opacity: 0; /* Start with hidden items */
         transform: translateY(-10px); /* Start slightly above */
         animation: fadeInUp 0.5s ease-out forwards; /* Apply animation */
+        font-family: "Germania One", serif;
+        font-weight: 400;
+        font-style: normal;
+        
       }
 
             /* Reverse animation for closing */
@@ -864,6 +870,7 @@ header .hamburger {
         color: white;
         text-decoration: none;
         font-size: 1.2rem;
+        
       }
 
 
@@ -980,7 +987,11 @@ header .hamburger {
       width: 100%;
     }
 
-
+    .logo {
+      font-family: "Germania One", serif;
+      font-weight: 400;
+      font-style: normal;
+    }
 
 }
 
