@@ -5,6 +5,13 @@ AOS.init({
     easing: 'ease-in-out-quad'
   });
 
+  document.getElementById('logo').addEventListener('click', function() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+
   document.addEventListener("DOMContentLoaded", function () {
     const menu = document.getElementById("menu");
     const menuCheckbox = document.getElementById("menu-checkbox");
