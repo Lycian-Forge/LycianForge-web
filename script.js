@@ -7,25 +7,63 @@ AOS.init({
 
   document.addEventListener("DOMContentLoaded", function () {
     const menu = document.getElementById("menu");
-    const hamburgerBtn = document.getElementById("hamburger-btn");
+    const menuCheckbox = document.getElementById("menu-checkbox");
 
-    if (!menu || !hamburgerBtn) {
-        console.error("Menu or Hamburger button not found!");
+    if (!menu || !menuCheckbox) {
+        console.error("Menu or Checkbox not found!");
         return;
     }
 
-    hamburgerBtn.addEventListener("click", function () {
-        console.log("Hamburger button clicked!"); // Debugging log
-
-        if (menu.classList.contains("active")) {
-            menu.classList.remove("active"); // Hide menu
-            console.log("Hamburger button deaclicked!"); // Debugging log
+    // Toggle menu visibility based on checkbox state
+    menuCheckbox.addEventListener("change", function () {
+        if (this.checked) {
+            // When the checkbox is checked, show the menu with the animation
+            menu.classList.add("active");
+            menu.classList.remove("closed");
         } else {
-            menu.classList.add("active");  // Show menu
-            console.log("Hamburger button actclicked!"); // Debugging log
+            // When the checkbox is unchecked, close the menu with the reverse animation
+            menu.classList.add("closed");
+            menu.classList.remove("active");
         }
     });
+
+    // Optional: Close menu if a menu item is clicked
+    menu.querySelectorAll("a").forEach(item => {
+        item.addEventListener("click", function () {
+            // Uncheck the checkbox and trigger closing animation
+            menuCheckbox.checked = false;
+            menu.classList.add("closed");
+            menu.classList.remove("active");
+        });
+    });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const aboutLink = document.querySelector("a[href='#about']");
+
+  if (!aboutLink) {
+    console.error("About link not found!");
+    return;
+  }
+
+  // Function to check the screen size and update the href attribute
+  function updateLinkBasedOnLayout() {
+    if (window.innerWidth <= 768) { // Mobile layout
+      aboutLink.setAttribute("href", "#team");
+    } else { // Desktop layout
+      aboutLink.setAttribute("href", "#about");
+    }
+  }
+
+  // Run the function on page load
+  updateLinkBasedOnLayout();
+
+  // Run the function whenever the window is resized
+  window.addEventListener("resize", updateLinkBasedOnLayout);
+});
+
+
+
 
 
 

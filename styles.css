@@ -237,6 +237,13 @@ header .hamburger {
   header .menu li a i {
     margin-left: 5px;
   }
+
+  header .menu a i.fas.fa-chevron-down {
+    background: linear-gradient(180deg, #ffffa0, #ff3cae71);
+    -webkit-background-clip: text; /* For Safari and Chrome */
+    color: transparent; /* Make the text color transparent so the gradient shows */
+  }
+  
   
     header .dropdown-content {
         display: none;
@@ -252,11 +259,15 @@ header .hamburger {
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
         opacity: 0;
         transform: translateY(10px);
-        transition: opacity 0.3s ease, transform 0.3s ease;
         z-index: 999;
+
+
         
     }
+
   
+
+
   header .dropdown-content li {
     margin: 0;
   }
@@ -697,18 +708,77 @@ header .hamburger {
   /* Responsive Design */
   @media (max-width: 768px) {
       /* Style the Hamburger Button */
-      header .hamburger {
-        display: block;
-        font-size: 2rem;
-        background: none;
-        border: none;
-        color: #b22222;
+      header .hamburger{
         cursor: pointer;
-        position: flex;
-        top: 10px;
-        left: 10px;
-        z-index: 10;
+        display: block;
       }
+      
+      header .hamburger input {
+        display: none;
+      }
+      
+      header .hamburger svg {
+        /* The size of the SVG defines the overall size */
+        height: 3em;
+        /* Define the transition for transforming the SVG */
+        transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      header .hamburger svg defs {
+        position: absolute;
+      }
+
+
+      header .hamburger svg defs linearGradient stop:nth-child(1) {
+        stop-color: #ffffa0;
+        offset: 0%;
+      }
+      
+      header .hamburger svg defs linearGradient stop:nth-child(2) {
+        stop-color: #f37a59;
+        offset: 50%;
+      }
+      
+      header .hamburger svg defs linearGradient stop:nth-child(3) {
+        stop-color: #ff3caf;
+        offset: 100%;
+      }
+      
+      header .line {
+        fill: none;
+        stroke: #f37a59; /* Apply the gradient */;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3;
+        transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+                    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+
+      header .line-top-bottom {
+        fill: none;
+        stroke: url(#gradient); /* Apply the gradient */
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3;
+        transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+                    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      
+      
+      
+      header .line-top-bottom {
+        stroke-dasharray: 12 63;
+      }
+      
+      header .hamburger input:checked + svg {
+        transform: rotate(-45deg);
+      }
+      
+      header .hamburger input:checked + svg .line-top-bottom {
+        stroke-dasharray: 20 300;
+        stroke-dashoffset: -32.42;
+      }
+      
 
       /* Default Hidden Menu */
       header .menu {
@@ -732,23 +802,74 @@ header .hamburger {
         border-bottom-left-radius: 8px;
         border-bottom-right-radius: 8px;
         box-shadow: #080808;
-        transition: .5s;
+        transition: 1s;
       }
       
 
 
       /* Menu Links */
-      .menu li {
+      header .menu li {
         padding: 10px 0;
         text-align:left;
         left: 1rem;
+        opacity: 0; /* Start with hidden items */
+        transform: translateY(-10px); /* Start slightly above */
+        animation: fadeInUp 0.5s ease-out forwards; /* Apply animation */
       }
 
+            /* Reverse animation for closing */
+      header .menu.closed li {
+        animation: fadeOutUp 0.5s ease-out forwards;
+      }
+
+            /* Stagger animation for each item */
+      header .menu li:nth-child(1) {
+        animation-delay: 0.1s;
+      }
+
+      header .menu li:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+
+      header .menu li:nth-child(3) {
+        animation-delay: 0.3s;
+      }
+
+      header .menu li:nth-child(4) {
+        animation-delay: 0.4s;
+      }
+
+      header .menu li:nth-child(5) {
+        animation-delay: 0.5s;
+      }
+
+      /* Keyframes for the fade-in animation */
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0); /* Move to original position */
+        }
+      }
+
+            /* Keyframes for the fade-out animation (reverse) */
+      @keyframes fadeOutUp {
+        to {
+          opacity: 0;
+          transform: translateY(-10px); /* Move back up */
+        }
+      }
+      
       .menu a {
         color: white;
         text-decoration: none;
         font-size: 1.2rem;
       }
+
+
+      header .menu a i.fas.fa-chevron-down {
+        display: none;
+      }
+      
 
         /* Dropdown Styling */
         .dropdown {
@@ -756,20 +877,13 @@ header .hamburger {
           overflow-x: none;
         }
 
-        .dropdown-content {
+        header .menu li:hover > .dropdown-content {
           display: none;
-          position: absolute; /* Absolute positioning allows movement */
-          background-color: rgba(26, 26, 26, 0.95);
-          top: 100%;
-          width: auto;
-          min-width: 150px;
-          z-index: 100; /* Ensure it appears above other elements */
+          opacity: 1;
+          transform: translateY(0);
         }
 
-        /* Show dropdown when hovering */
-        .dropdown:hover .dropdown-content {
-          display: block;
-        }
+
 
     .loader {
       --cell-size: 100px;
