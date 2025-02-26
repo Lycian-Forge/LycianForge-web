@@ -15,7 +15,7 @@ AOS.init({
   document.addEventListener("DOMContentLoaded", function () {
     const menu = document.getElementById("menu");
     const menuCheckbox = document.getElementById("menu-checkbox");
-    const hamburgerCheckBox = document.getElementById("hamburger-btn")
+    const hamburgerCheckBox = document.getElementById("hamburger-btn");
     ;
 
     if (!menu || !menuCheckbox) {
@@ -52,7 +52,7 @@ AOS.init({
     // Close the menu if a click or touch happens outside the menu or checkbox
     document.addEventListener("click", function (event) {
         const isClickInsideMenu = menu.contains(event.target);
-        const isClickInsideHamburger = hamburgerCheckBox.contains(event.target)
+        const isClickInsideHamburger = hamburgerCheckBox && hamburgerCheckBox.contains(event.target)
 
         if (!isClickInsideMenu && !isClickInsideHamburger ) {
             // Uncheck the checkbox and trigger closing animation if the click is outside
@@ -65,11 +65,11 @@ AOS.init({
         }
     });
 
-    document.addEventListener("ontouchstart", function (event) {
+    document.addEventListener("touchstart", function (event) {
         const isTouchInsideMenu = menu.contains(event.target);
         const isClickInsideHamburger = hamburgerCheckBox.contains(event.target)
 
-        if (!isTouchInsideMenu && isClickInsideHamburger) {
+        if (!isTouchInsideMenu && !isClickInsideHamburger) {
             // Uncheck the checkbox and trigger closing animation if the touch is outside
             if (menuCheckbox.checked) {
                 menuCheckbox.checked = false;
