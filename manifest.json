@@ -1,0 +1,31 @@
+{
+  "name": "Lycian Forge Game Studio",
+  "short_name": "Lycian Forge",
+  "description": "Lycian Forge is an indie game studio crafting fast-paced, thrilling games. Founded in 2024, we forge heart-racing adventures.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#ff3caf",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "logo256.jpg",
+      "sizes": "256x256",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ]
+}
+
