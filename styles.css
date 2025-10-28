@@ -1784,6 +1784,11 @@ header .hamburger {
     /* Roadmap Mobile */
     .roadmap {
       padding: 50px 0;
+      overflow-x: hidden;
+    }
+
+    .roadmap .container {
+      padding: 0 15px;
     }
 
     .roadmap h2 {
@@ -1796,13 +1801,19 @@ header .hamburger {
       margin-bottom: 40px;
     }
 
+    .timeline {
+      padding-right: 0;
+      overflow-x: hidden;
+    }
+
     .timeline::before {
       left: 15px;
     }
 
     .timeline-item {
       flex-direction: column !important;
-      padding-left: 40px;
+      padding-left: 35px;
+      padding-right: 10px;
       margin-bottom: 25px;
     }
 
@@ -1820,11 +1831,13 @@ header .hamburger {
     }
 
     .timeline-content {
-      width: 100%;
+      width: calc(100% - 10px);
+      max-width: 100%;
       margin: 0 !important;
       padding: 15px 50px 15px 15px;
       border-radius: 10px;
       border-width: 1px;
+      box-sizing: border-box;
     }
 
     .timeline-content h3 {
