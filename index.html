@@ -3,14 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lycian Forge</title>
+  
+  <!-- SEO Meta Tags -->
+  <title>Lycian Forge - Indie Game Studio | Fast-Paced Gaming Adventures</title>
+  <meta name="description" content="Lycian Forge is an indie game studio crafting fast-paced, thrilling games. Founded in 2024, we forge heart-racing adventures including Coloveparate and Dawnveil.">
+  <meta name="keywords" content="indie game studio, game development, Lycian Forge, Coloveparate, Dawnveil, video games, gaming">
+  <meta name="author" content="Lycian Forge">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph Meta Tags (Facebook, LinkedIn) -->
+  <meta property="og:title" content="Lycian Forge - Indie Game Studio">
+  <meta property="og:description" content="We forge fast, thrilling, and heart-racing games that keep you glued to your screen. Check out our latest projects!">
+  <meta property="og:image" content="https://lycianforge.com/logo256.jpg">
+  <meta property="og:url" content="https://lycianforge.com">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Lycian Forge">
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Lycian Forge - Indie Game Studio">
+  <meta name="twitter:description" content="We forge fast, thrilling, and heart-racing games that keep you glued to your screen.">
+  <meta name="twitter:image" content="https://lycianforge.com/logo256.jpg">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="logo256.jpg">
+  <link rel="apple-touch-icon" href="logo256.jpg">
+  
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-
   <link href="https://fonts.googleapis.com/css2?family=Germania+One&family=Honk:MORF,SHLN@19,37.3&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
@@ -35,13 +59,13 @@
 
       
       
-        <header>
+        <header role="banner">
             <div class="container">
-              <div class="logo" id="logo">LYCIAN FORGE</div>
-              <nav>
-                <label class="hamburger" id="hamburger-btn">
-                  <input type="checkbox" id="menu-checkbox">
-                  <svg viewBox="0 0 32 32">
+              <div class="logo" id="logo" role="button" tabindex="0" aria-label="Lycian Forge logo, click to return to top">LYCIAN FORGE</div>
+              <nav role="navigation" aria-label="Main navigation">
+                <label class="hamburger" id="hamburger-btn" aria-label="Toggle navigation menu">
+                  <input type="checkbox" id="menu-checkbox" aria-label="Menu toggle">
+                  <svg viewBox="0 0 32 32" aria-hidden="true">
                     <!-- Gradient Definition -->
                     <defs>
                       <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -56,17 +80,18 @@
                   
                 </label>
                 
-                <ul class="menu" id="menu">
-                  <li><a href="#games">GAMES</a></li>
-                  <li class="dropdown">
-                    <a href="#about">ABOUT <i class="fas fa-chevron-down"></i></a>
-                    <ul class="dropdown-content">
-                      <li><a href="#team">Team</a></li>
-                      <li><a href="#career">Careers</a></li>
+                <ul class="menu" id="menu" role="menubar">
+                  <li role="none"><a href="#games" role="menuitem">GAMES</a></li>
+                  <li class="dropdown" role="none">
+                    <a href="#about" role="menuitem" aria-haspopup="true" aria-expanded="false">ABOUT <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
+                    <ul class="dropdown-content" role="menu" aria-label="About submenu">
+                      <li role="none"><a href="#roadmap" role="menuitem">Roadmap</a></li>
+                      <li role="none"><a href="#team" role="menuitem">Team</a></li>
+                      <li role="none"><a href="#career" role="menuitem">Careers</a></li>
                     </ul>
                   </li>
-                  <li><a href="#contact">CONTACT</a></li>
-                  <li><a href="https://utility.lycianforge.com">UTILITIES</a></li>
+                  <li role="none"><a href="#contact" role="menuitem">CONTACT</a></li>
+                  <li role="none"><a href="https://utility.lycianforge.com" role="menuitem">UTILITIES</a></li>
                 </ul>
               </nav>
             </div>
@@ -84,27 +109,145 @@
             </div>
           </section>
           
-          <section id="games" class="games">
+          <section id="games" class="games" role="region" aria-label="Our Games">
             <div class="container">
               <h2 data-aos="fade-up">Our Games</h2>
               <div class="game-grid">
-                <div class="game-card" data-aos="fade-up" style="background: url('coloveparate.png') center/cover fixed;">
-                  <div class="game-card-content">
-                    <h3>Coloveparate</h3>
-                    <p>Get yourself your duo and embark on a colorful adventure!</p>
-                  </div>
-                </div>
-                <div class="game-card" data-aos="fade-up" style="background: url('Dawnveil.png') center/cover fixed;">
+                <article class="game-card" data-aos="fade-up" role="article" aria-label="Dawnveil game">
                     <div class="game-card-content">
-                      <h3>Dawnveil</h3>
-                      <p>The eclipse has left the world unbalanced, and it's up to you to restore harmony.</p>
+                      <!-- Left Side: Game Image -->
+                      <div class="game-image-section">
+                        <div class="game-status-badge in-development">In Development</div>
+                        <img src="Dawnveil.png" alt="Dawnveil Game Cover">
+                      </div>
+                      
+                      <!-- Right Side: Game Info -->
+                      <div class="game-info-section">
+                        <h3>Dawnveil</h3>
+                        <p>The eclipse has left the world unbalanced, and it's up to you to restore harmony. Embark on an epic journey through mystical lands.</p>
+                        
+                        <div class="game-meta">
+                          <span class="game-genre">
+                            <i class="fas fa-magic" aria-hidden="true"></i>
+                            Action RPG
+                          </span>
+                          <span class="game-platform">
+                            <i class="fas fa-desktop" aria-hidden="true"></i>
+                            PC
+                          </span>
+                        </div>
+                        
+                        <button class="watch-trailer-btn" aria-label="Watch Dawnveil trailer">
+                          <i class="fas fa-play-circle" aria-hidden="true"></i>
+                          <span>Watch Trailer</span>
+                        </button>
+                      </div>
                     </div>
-                  </div>
+                    
+                    <!-- Trailer Modal -->
+                    <div class="trailer-modal" role="dialog" aria-modal="true" aria-label="Dawnveil trailer video">
+                      <div class="trailer-modal-content">
+                        <button class="close-trailer" aria-label="Close trailer">&times;</button>
+                          <div class="video-wrapper">
+                            <!-- Replace YOUR_VIDEO_ID with your actual YouTube video ID -->
+                            <!-- For testing, using a video that allows embedding -->
+                              <iframe 
+                                src="" 
+                                data-src="https://www.youtube.com/embed/J-mOElxWfH8?autoplay=1" 
+                                title="Dawnveil Game Trailer"
+                                frameborder="0"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                              referrerpolicy="strict-origin-when-cross-origin"
+                              allowfullscreen>
+                            </iframe>
+                          </div>
+                      </div>
+                    </div>
+                  </article>
               </div>
             </div>
           </section>
         
-          <section id="team" class="team">
+          <!-- Roadmap Section -->
+          <section id="roadmap" class="roadmap">
+            <div class="container">
+              <h2 data-aos="fade-up">Development Roadmap</h2>
+              <p class="roadmap-subtitle" data-aos="fade-up" data-aos-delay="100">Follow our journey as we forge new gaming experiences</p>
+              <div class="timeline">
+                <div class="timeline-item completed" data-aos="fade-right">
+                  <div class="timeline-content">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-date">Q1 2024</div>
+                    <h3>Studio Founded</h3>
+                    <p>Lycian Forge was born! Three engineers decided to turn coffee into games.</p>
+                    <div class="timeline-status">✓ Completed</div>
+                  </div>
+                </div>
+                
+                <div class="timeline-item completed" data-aos="fade-left">
+                  <div class="timeline-content">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-date">Q2-Q3 2024</div>
+                    <h3>Pre-Production</h3>
+                    <p>Planning and team-building for our next game "Dawnveil"</p>
+                    <div class="timeline-status">✓ Completed</div>
+                  </div>
+                </div>
+                
+                <div class="timeline-item active" data-aos="fade-right">
+                  <div class="timeline-content">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-date">Q4 2025</div>
+                    <h3>Active Development</h3>
+                    <p>Full production on Dawnveil. Creating gameplay mechanics, core features and artwork</p>
+                    <div class="timeline-status">🔥 In Progress</div>
+                  </div>
+                </div>
+                
+                <div class="timeline-item upcoming" data-aos="fade-left">
+                  <div class="timeline-content">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-date">Q4 2026</div>
+                    <h3>Alpha Testing</h3>
+                    <p>Internal testing, bug fixes, and gameplay balancing for our first title.</p>
+                    <div class="timeline-status">⏳ Upcoming</div>
+                  </div>
+                </div>
+                
+                <div class="timeline-item upcoming" data-aos="fade-right">
+                  <div class="timeline-content">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-date">Q1 2027</div>
+                    <h3>Beta & Wishlist Campaign</h3>
+                    <p>Closed beta access for community members and Steam page launch.</p>
+                    <div class="timeline-status">⏳ Upcoming</div>
+                  </div>
+                </div>
+                
+                <div class="timeline-item upcoming" data-aos="fade-left">
+                  <div class="timeline-content">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-date">2027</div>
+                    <h3>First Game Release</h3>
+                    <p>The moment we've all been waiting for - our debut game hits the market!</p>
+                    <div class="timeline-status">🎯 Target</div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Timeline End Indicator -->
+              <div class="timeline-end" data-aos="fade-up">
+                <div class="timeline-dots">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <p>More adventures to come...</p>
+              </div>
+            </div>
+          </section>
+
+          <section id="team" class="team" role="region" aria-label="Our Team">
             <div class="container">
               <h2 data-aos="fade-up">Our Team</h2>
               <div class="team-grid">
@@ -215,56 +358,88 @@
             
           </section>
           <!-- Career Section -->
-          <section id="career">
+          <section id="career" role="region" aria-label="Career Opportunities">
             <div class="career-container">
                 <h2>Join Our Team</h2>
                 <p>We're looking for passionate developers, artists, and designers to build the future of gaming.</p>
                 
                 <div class="job-listings">
-                    <div class="job">
+                    <article class="job" role="article" aria-label="Game Developer position">
                         <h3>Game Developer</h3>
                         <p>No experience needed! Entry-level knowledge required in Unity 6.0!</p>
-                        <a href="mailto:arda@lycianforge.com?subject=Game Developer Application" class="apply-btn">Apply Now</a>
-                    </div>
-                    <div class="job">
+                        <a href="mailto:arda@lycianforge.com?subject=Game Developer Application" class="apply-btn" aria-label="Apply for Game Developer position">Apply Now</a>
+                    </article>
+                    <article class="job" role="article" aria-label="3D Artist position">
                         <h3>3D Artist</h3>
                         <p>No prior experience needed! Photoshop or 3D modelling software.</p>
-                        <a href="mailto:arda@lycianforge.com?subject=3D Artist Application" class="apply-btn">Apply Now</a>
-                    </div>
-                    <div class="job">
+                        <a href="mailto:arda@lycianforge.com?subject=3D Artist Application" class="apply-btn" aria-label="Apply for 3D Artist position">Apply Now</a>
+                    </article>
+                    <article class="job" role="article" aria-label="Musician position">
                       <h3>Musician</h3>
                       <p>Send us a portfolio and we can consider using your music in our projects!</p>
-                      <a href="mailto:arda@lycianforge.com?subject=3D Artist Application" class="apply-btn">Apply Now</a>
-                  </div>
+                      <a href="mailto:arda@lycianforge.com?subject=Musician Application" class="apply-btn" aria-label="Apply for Musician position">Apply Now</a>
+                  </article>
                 </div>
             </div>
           </section>
 
-          <!-- Contact Section -->
-          <section id="contact">
-            <div class="contact-container">
-                <h2>Contact Us</h2>
-                <p>Got any questions or ideas? Drop us a message below.</p>
+          <!-- Contact & Newsletter Section -->
+          <section id="contact" class="contact-newsletter-section" role="region" aria-label="Contact and Newsletter">
+            <div class="container">
+              <div class="contact-newsletter-grid">
+                <!-- Contact Form -->
+                <div class="contact-box" data-aos="fade-right">
+                  <h2>Contact Us</h2>
+                  <p>Got any questions or ideas? Drop us a message below.</p>
 
-                <form id="contactForm">
-                    <input type="text" id="name" name="name" placeholder="Your Name" required>
-                    <input type="email" id="email" name="email" placeholder="Your Email" required>
-                    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-                    <button type="submit" class="send-btn">Send Message</button>
-                </form>
+                  <form id="contactForm" aria-label="Contact form">
+                      <input type="text" id="name" name="name" placeholder="Your Name" required aria-label="Your name" aria-required="true">
+                      <input type="email" id="email" name="email" placeholder="Your Email" required aria-label="Your email address" aria-required="true">
+                      <textarea id="message" name="message" placeholder="Your Message" required aria-label="Your message" aria-required="true"></textarea>
+                      <button type="submit" class="send-btn" aria-label="Send contact message">Send Message</button>
+                  </form>
 
-                <p id="formStatus" class="hidden">Message Sent! We usually respond in 1-2 business days.</p>
+                  <p id="formStatus" class="hidden" role="alert" aria-live="polite">Message Sent! We usually respond in 1-2 business days.</p>
+                </div>
+
+                <!-- Newsletter Box -->
+                <div class="newsletter-box" data-aos="fade-left">
+                  <i class="fas fa-envelope newsletter-icon" aria-hidden="true"></i>
+                  <h2>Stay in the Loop</h2>
+                  <p>Get exclusive dev updates, early access opportunities, and behind-the-scenes content delivered straight to your inbox.</p>
+                  
+                  <form id="newsletterForm" class="newsletter-form" aria-label="Newsletter subscription form">
+                    <input 
+                      type="email" 
+                      id="newsletter-email" 
+                      name="email" 
+                      placeholder="your@email.com" 
+                      required 
+                      aria-label="Email address"
+                      aria-required="true">
+                    <button type="submit" class="newsletter-btn" aria-label="Subscribe to newsletter">
+                      <span class="btn-text">Join the Forge</span>
+                      <span class="btn-loading" style="display: none;">
+                        <i class="fas fa-spinner fa-spin" aria-hidden="true"></i>
+                      </span>
+                    </button>
+                  </form>
+                  
+                  <p id="newsletterStatus" class="hidden" role="alert" aria-live="polite"></p>
+                  <p class="newsletter-note">Unsubscribe anytime.</p>
+                </div>
+              </div>
             </div>
           </section>
 
         
-          <footer>
+          <footer role="contentinfo">
             <div class="container">
-              <div class="social-icons">
-                <a href="#" target="_blank"><i class="fab fa-twitter" ></i></a>
-                <a href="#" target="_blank"><i class="fab fa-discord" ></i></a>
-                <a href="#" target="_blank"><i class="fab fa-youtube" ></i></a>
-                <a href="https://github.com/Lycian-Forge" target="_blank"><i class="fab fa-github" ></i></a>
+              <div class="social-icons" role="navigation" aria-label="Social media links">
+                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Join our Discord server"><i class="fab fa-discord" aria-hidden="true"></i></a>
+                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Subscribe to our YouTube channel"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                <a href="https://github.com/Lycian-Forge" target="_blank" rel="noopener noreferrer" aria-label="View our GitHub profile"><i class="fab fa-github" aria-hidden="true"></i></a>
               </div>
               <p>&copy; 2024 Lycian Forge. All rights reserved.</p>
             </div>

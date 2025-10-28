@@ -5,11 +5,25 @@ AOS.init({
     easing: 'ease-in-out-quad'
   });
 
-  document.getElementById('logo').addEventListener('click', function() {
+  // Logo click and keyboard accessibility
+  const logo = document.getElementById('logo');
+  
+  logo.addEventListener('click', function() {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
     });
+  });
+
+  // Keyboard support for logo
+  logo.addEventListener('keypress', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
   });
 
   document.addEventListener("DOMContentLoaded", function () {
@@ -29,12 +43,12 @@ AOS.init({
             // When the checkbox is checked, show the menu with the animation
             menu.classList.add("active");
             menu.classList.remove("closed");
-            console.error("Menu opened");
+            console.log("Menu opened");
         } else {
             // When the checkbox is unchecked, close the menu with the reverse animation
             menu.classList.add("closed");
             menu.classList.remove("active");
-            console.error("Menu closed");
+            console.log("Menu closed");
         }
     });
 
@@ -45,7 +59,7 @@ AOS.init({
             menuCheckbox.checked = false;
             menu.classList.add("closed");
             menu.classList.remove("active");
-            console.error("Menu item clicked, menu closed");
+            console.log("Menu item clicked, menu closed");
         });
     });
 
@@ -60,7 +74,7 @@ AOS.init({
                 menuCheckbox.checked = false;
                 menu.classList.add("closed");
                 menu.classList.remove("active");
-                console.error("Menu closed from outside click");
+                console.log("Menu closed from outside click");
             }
         }
     });
@@ -75,7 +89,7 @@ AOS.init({
                 menuCheckbox.checked = false;
                 menu.classList.add("closed");
                 menu.classList.remove("active");
-                console.error("Menu closed from outside touch");
+                console.log("Menu closed from outside touch");
             }
         }
     });
@@ -269,6 +283,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 
+  // Contact Form with Loading State
   document.getElementById('contactForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -276,6 +291,11 @@ document.addEventListener("DOMContentLoaded", function () {
     let email = document.getElementById('email').value;
     let message = document.getElementById('message').value;
     let statusMessage = document.getElementById('formStatus');
+    let submitBtn = event.target.querySelector('.send-btn');
+
+    // Show loading state
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
 
     fetch("https://formspree.io/f/xwpvqqrn", {
         method: "POST",
@@ -299,5 +319,128 @@ document.addEventListener("DOMContentLoaded", function () {
         statusMessage.textContent = "Error sending message.";
         statusMessage.style.color = "red";
         statusMessage.classList.remove("hidden");
+    })
+    .finally(() => {
+        // Reset button state
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Message';
     });
-});
+  });
+
+  // Newsletter Form with Loading State
+  document.getElementById('newsletterForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    let email = document.getElementById('newsletter-email').value;
+    let statusMessage = document.getElementById('newsletterStatus');
+    let submitBtn = event.target.querySelector('.newsletter-btn');
+    let btnText = submitBtn.querySelector('.btn-text');
+    let btnLoading = submitBtn.querySelector('.btn-loading');
+
+    // Show loading state
+    submitBtn.disabled = true;
+    btnText.style.display = 'none';
+    btnLoading.style.display = 'inline-block';
+
+    // Use Formspree for newsletter (you can create a separate form for this)
+    fetch("https://formspree.io/f/xwpvqqrn", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ 
+          email: email, 
+          message: "Newsletter subscription request",
+          _subject: "New Newsletter Subscription"
+        })
+    })
+    .then(response => {
+        statusMessage.classList.remove('hidden', 'error');
+        if (response.ok) {
+            statusMessage.textContent = "🎉 Welcome to the Forge! Check your inbox for confirmation.";
+            statusMessage.classList.add('success');
+            document.getElementById('newsletterForm').reset();
+        } else {
+            statusMessage.textContent = "Oops! Something went wrong. Please try again.";
+            statusMessage.classList.add('error');
+        }
+    })
+    .catch(error => {
+        statusMessage.classList.remove('hidden', 'success');
+        statusMessage.textContent = "Network error. Please check your connection.";
+        statusMessage.classList.add('error');
+    })
+    .finally(() => {
+        // Reset button state
+        submitBtn.disabled = false;
+        btnText.style.display = 'inline-block';
+        btnLoading.style.display = 'none';
+        
+        // Hide status message after 5 seconds
+        setTimeout(() => {
+            statusMessage.classList.add('hidden');
+        }, 5000);
+    });
+  });
+
+  // Trailer Modal Functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const trailerBtn = document.querySelector('.watch-trailer-btn');
+    const trailerModal = document.querySelector('.trailer-modal');
+    const closeTrailerBtn = document.querySelector('.close-trailer');
+    const trailerIframe = trailerModal?.querySelector('iframe');
+
+    if (trailerBtn && trailerModal) {
+      // Open trailer modal
+      trailerBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        trailerModal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        
+        // Load the video (lazy load)
+        if (trailerIframe && trailerIframe.dataset.src) {
+          trailerIframe.src = trailerIframe.dataset.src;
+        }
+      });
+
+      // Close trailer modal
+      function closeTrailer() {
+        trailerModal.classList.remove('active');
+        document.body.style.overflow = ''; // Restore scrolling
+        
+        // Stop the video by clearing src
+        if (trailerIframe) {
+          trailerIframe.src = '';
+        }
+      }
+
+      if (closeTrailerBtn) {
+        closeTrailerBtn.addEventListener('click', closeTrailer);
+      }
+
+      // Close on background click
+      trailerModal.addEventListener('click', function(e) {
+        // Close if clicking on the modal background (not on the content)
+        if (e.target === trailerModal || e.target.classList.contains('trailer-modal')) {
+          closeTrailer();
+        }
+      });
+
+      // Also add click listener to modal content wrapper
+      const modalContent = trailerModal.querySelector('.trailer-modal-content');
+      if (modalContent) {
+        // Prevent clicks inside the content from bubbling to the modal
+        modalContent.addEventListener('click', function(e) {
+          e.stopPropagation();
+        });
+      }
+
+      // Close on Escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && trailerModal.classList.contains('active')) {
+          closeTrailer();
+        }
+      });
+    }
+  });
