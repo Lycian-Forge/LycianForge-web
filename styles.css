@@ -1783,74 +1783,82 @@ header .hamburger {
 
     /* Roadmap Mobile */
     .roadmap {
-      padding: 60px 0;
+      padding: 50px 0;
     }
 
     .roadmap h2 {
-      font-size: 1.8rem;
+      font-size: 1.6rem;
+      margin-bottom: 30px;
+    }
+
+    .roadmap-subtitle {
+      font-size: 0.9rem;
+      margin-bottom: 40px;
     }
 
     .timeline::before {
-      left: 20px;
+      left: 15px;
     }
 
     .timeline-item {
       flex-direction: column !important;
-      padding-left: 50px;
-      margin-bottom: 35px;
+      padding-left: 40px;
+      margin-bottom: 25px;
     }
 
     .timeline-marker {
-      top: 15px;
-      right: 15px;
-      width: 32px;
-      height: 32px;
+      top: 12px;
+      right: 12px;
+      width: 28px;
+      height: 28px;
       border-width: 2px;
     }
 
     .timeline-marker::after {
-      width: 10px;
-      height: 10px;
+      width: 8px;
+      height: 8px;
     }
 
     .timeline-content {
       width: 100%;
       margin: 0 !important;
-      padding: 20px 60px 20px 20px;
-      border-radius: 12px;
+      padding: 15px 50px 15px 15px;
+      border-radius: 10px;
+      border-width: 1px;
     }
 
     .timeline-content h3 {
-      font-size: 1.2rem;
-      margin-bottom: 8px;
+      font-size: 1rem;
+      margin-bottom: 6px;
     }
 
     .timeline-content p {
-      font-size: 0.9rem;
-      line-height: 1.6;
-      margin-bottom: 15px;
+      font-size: 0.8rem;
+      line-height: 1.5;
+      margin-bottom: 10px;
     }
 
     .timeline-date {
-      font-size: 0.75rem;
-      padding: 4px 12px;
+      font-size: 0.65rem;
+      padding: 3px 10px;
+      margin-bottom: 10px;
     }
 
     .timeline-status {
-      font-size: 0.85rem;
+      font-size: 0.75rem;
     }
 
     .timeline-end {
-      margin-top: 30px;
+      margin-top: 25px;
     }
 
     .timeline-dots span {
-      width: 8px;
-      height: 8px;
+      width: 7px;
+      height: 7px;
     }
 
     .timeline-end p {
-      font-size: 0.9rem;
+      font-size: 0.85rem;
     }
 
     .rainbow-border {
