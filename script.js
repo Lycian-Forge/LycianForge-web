@@ -1,4 +1,21 @@
 // ===========================
+// Loading Screen
+// ===========================
+window.addEventListener('load', function() {
+  const loaderWrapper = document.getElementById('loader-wrapper');
+  
+  // Ensure minimum loading time of 1 second for smooth experience
+  setTimeout(() => {
+    loaderWrapper.classList.add('fade-out');
+    
+    // Remove from DOM after fade out
+    setTimeout(() => {
+      loaderWrapper.style.display = 'none';
+    }, 500);
+  }, 1000);
+});
+
+// ===========================
 // Mobile Menu Toggle
 // ===========================
 document.addEventListener("DOMContentLoaded", function () {

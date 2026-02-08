@@ -1,4 +1,117 @@
 /* ===========================
+   Loading Screen
+   =========================== */
+.loader {
+  --cell-size: 180px;
+  --cell-spacing: 10px;
+  --cells: 3;
+  --total-size: calc(var(--cells) * (var(--cell-size) + 2 * var(--cell-spacing)));
+  display: flex;
+  flex-wrap: wrap;
+  width: var(--total-size);
+  height: var(--total-size);
+}
+
+.cell {
+  flex: 0 0 var(--cell-size);
+  margin: var(--cell-spacing);
+  background-color: transparent;
+  box-sizing: border-box;
+  border-radius: 4px;
+  animation: 1.5s ripple ease infinite;
+}
+
+.cell.d-1 {
+  animation-delay: 100ms;
+}
+
+.cell.d-2 {
+  animation-delay: 200ms;
+}
+
+.cell.d-3 {
+  animation-delay: 300ms;
+}
+
+.cell.d-4 {
+  animation-delay: 400ms;
+}
+
+.cell:nth-child(1) {
+  --cell-color: #FFD700;
+}
+
+.cell:nth-child(2) {
+  --cell-color: #FFA500;
+}
+
+.cell:nth-child(3) {
+  --cell-color: #FF8C00;
+}
+
+.cell:nth-child(4) {
+  --cell-color: #FF6B35;
+}
+
+.cell:nth-child(5) {
+  --cell-color: #FF7F50;
+}
+
+.cell:nth-child(6) {
+  --cell-color: #8B5A8D;
+}
+
+.cell:nth-child(7) {
+  --cell-color: #9370DB;
+}
+
+.cell:nth-child(8) {
+  --cell-color: #BA55D3;
+}
+
+.cell:nth-child(9) {
+  --cell-color: #4A4A6A;
+}
+
+/* Animation */
+@keyframes ripple {
+  0% {
+    background-color: transparent;
+  }
+
+  30% {
+    background-color: var(--cell-color);
+  }
+
+  60% {
+    background-color: transparent;
+  }
+
+  100% {
+    background-color: transparent;
+  }
+}
+
+#loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, var(--midnight), var(--night-dark));
+  z-index: 99999;
+}
+
+#loader-wrapper.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+/* ===========================
    CSS Reset & Base Styles
    =========================== */
 * {
@@ -2014,6 +2127,12 @@ section {
   :root {
     --spacing-lg: 3rem;
     --spacing-xl: 4rem;
+  }
+  
+  /* Loading Screen Mobile */
+  .loader {
+    --cell-size: 100px;
+    --cell-spacing: 5px;
   }
   
   /* Feature Cards Mobile */
