@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>About Us - Lycian Forge</title>
+  <meta name="description" content="Meet the team behind Lycian Forge. Learn about our mission, vision, and the passionate individuals crafting epic gaming experiences.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header id="header">
+    <div class="container header-container">
+      <a href="index.html" class="logo-link">
+        <img src="logo.png" alt="Lycian Forge Logo" class="logo-image">
+        <span class="logo-text">LYCIAN FORGE</span>
+      </a>
+      
+      <nav class="main-nav">
+        <label class="hamburger" id="hamburger-btn" aria-label="Toggle navigation menu">
+          <input type="checkbox" id="menu-checkbox" aria-label="Menu toggle">
+          <svg viewBox="0 0 32 32" aria-hidden="true">
+            <defs>
+              <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#FFD700" />
+                <stop offset="50%" stop-color="#FFA500" />
+                <stop offset="100%" stop-color="#FF6B35" />
+              </linearGradient>
+            </defs>
+            <path class="line" d="M7 16 27 16"></path>
+            <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+          </svg>
+        </label>
+        
+        <ul class="nav-menu" id="menu">
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="games.html">Games <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="games.html#warrior-smith">The Warrior and the Smith</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1 class="page-title">About Lycian Forge</h1>
+      <p class="page-subtitle">Passionate creators forging the future of indie gaming</p>
+    </div>
+  </section>
+
+  <!-- Studio Story -->
+  <section class="studio-story">
+    <div class="container">
+      <div class="story-grid">
+        <div class="story-content">
+          <span class="section-tag">Our Story</span>
+          <h2>Born from Passion, Forged in Fire</h2>
+          <p>
+            Lycian Forge was founded in 2024 by three engineer friends who shared a common vision: to create games that challenge players and bring people together. What started as late-night brainstorming sessions evolved into a passionate indie studio dedicated to crafting cooperative experiences that emphasize teamwork and meaningful gameplay.
+          </p>
+          <p>
+            We believe the best games emerge from genuine passion and creative freedom. As an independent studio, we have the liberty to take risks, experiment with innovative mechanics, and create experiences that prioritize gameplay depth over trends.
+          </p>
+          <p>
+            Our name, "Lycian Forge," embodies our philosophy: like skilled craftsmen at the anvil, we forge our games through dedication, iteration, and an unwavering commitment to quality. Our debut title, "The Warrior and the Smith," reflects this philosophy—a cooperative roguelike ARPG where two players must work in perfect harmony to overcome impossible odds.
+          </p>
+        </div>
+        
+        <div class="story-image">
+          <img src="dawn.jpg" alt="Lycian Forge Studio" class="story-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & Values -->
+  <section class="mission-values">
+    <div class="container">
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-icon">
+            <i class="fas fa-heart"></i>
+          </div>
+          <h3>Passion-Driven</h3>
+          <p>Every decision we make is guided by our love for gaming and storytelling.</p>
+        </div>
+        
+        <div class="value-card">
+          <div class="value-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3>Community-Focused</h3>
+          <p>We create games for players, with players, listening to feedback every step of the way.</p>
+        </div>
+        
+        <div class="value-card">
+          <div class="value-icon">
+            <i class="fas fa-star"></i>
+          </div>
+          <h3>Quality First</h3>
+          <p>We never compromise on quality, ensuring every release meets our high standards.</p>
+        </div>
+        
+        <div class="value-card">
+          <div class="value-icon">
+            <i class="fas fa-lightbulb"></i>
+          </div>
+          <h3>Innovation</h3>
+          <p>We push boundaries and experiment with new ideas to create unique experiences.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="team-section">
+    <div class="container">
+      <div class="section-header centered">
+        <span class="section-tag">The Forge Masters</span>
+        <h2 class="section-title">Meet Our Team</h2>
+        <p class="section-description">The talented individuals bringing our visions to life</p>
+      </div>
+      
+      <div class="team-grid">
+        <!-- Team Member 1 -->
+        <div class="team-member-card">
+          <div class="member-image-wrapper">
+            <img src="rd.jpg" alt="Arda Güngör" class="member-image">
+            <div class="member-overlay">
+              <div class="member-social">
+                <a href="https://github.com/aoushi" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/arda-gungor-aba578177/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="member-info">
+            <h3>Arda Güngör</h3>
+            <span class="member-role">Co-Founder & Lead Developer</span>
+            <p>Lead developer and composer with a passion for creating immersive gameplay experiences. Industrial Engineer by training, game developer by heart.</p>
+          </div>
+        </div>
+        
+        <!-- Team Member 2 -->
+        <div class="team-member-card">
+          <div class="member-image-wrapper">
+            <img src="gokai.jpg" alt="Gökay Kayhan" class="member-image">
+            <div class="member-overlay">
+              <div class="member-social">
+                <a href="https://github.com/Kam-ay" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/gokaykayhan/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="member-info">
+            <h3>Gökay Kayhan</h3>
+            <span class="member-role">Co-Founder & Lead Artist</span>
+            <p>Art director bringing visual beauty to every frame. Industrial Engineer with an eye for design and a talent for creating stunning game worlds.</p>
+          </div>
+        </div>
+        
+        <!-- Team Member 3 -->
+        <div class="team-member-card">
+          <div class="member-image-wrapper">
+            <img src="joseph.jpg" alt="Yusuf Keskin" class="member-image">
+            <div class="member-overlay">
+              <div class="member-social">
+                <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="member-info">
+            <h3>Yusuf Keskin</h3>
+            <span class="member-role">Principal Game Designer</span>
+            <p>Computer Scientist specializing in game and level design, crafting engaging gameplay experiences that keep players coming back for more.</p>
+          </div>
+        </div>
+        
+        <!-- Team Member 4 -->
+        <div class="team-member-card">
+          <div class="member-image-wrapper">
+            <img src="ushie.jpg" alt="Utku Kalaycı" class="member-image">
+            <div class="member-overlay">
+              <div class="member-social">
+                <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/utku-kalayci/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="member-info">
+            <h3>Utku Kalaycı</h3>
+            <span class="member-role">Narrative Designer</span>
+            <p>Master storyteller and Industrial Engineer, weaving compelling narratives that breathe life into our game worlds and characters.</p>
+          </div>
+        </div>
+        
+        <!-- Team Member 5 -->
+        <div class="team-member-card">
+          <div class="member-image-wrapper">
+            <img src="ftunc.jpeg" alt="Furkan Tunç Söğüt" class="member-image">
+            <div class="member-overlay">
+              <div class="member-social">
+                <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="member-info">
+            <h3>Furkan Tunç Söğüt</h3>
+            <span class="member-role">Developer</span>
+            <p>Talented developer bringing technical expertise and creative solutions to our game development process.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Careers Section -->
+  <section class="careers-section">
+    <div class="container">
+      <div class="section-header centered">
+        <span class="section-tag">Join Us</span>
+        <h2 class="section-title">We can include you in our games!</h2>
+        <p class="section-description">Want to be part of our journey? We're looking for passionate creators!</p>
+      </div>
+      
+      <div class="careers-grid">
+        <div class="career-card">
+          <div class="career-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3>Game Developer</h3>
+          <p>No experience needed! Entry-level knowledge required in Unity 6.0. Passion for game development is a must.</p>
+          <ul class="career-requirements">
+            <li>Basic Unity knowledge</li>
+            <li>C# fundamentals</li>
+            <li>Enthusiasm to learn</li>
+          </ul>
+          <a href="mailto:arda@lycianforge.com?subject=Game Developer Application" class="btn btn-primary">Apply Now</a>
+        </div>
+        
+        <div class="career-card">
+          <div class="career-icon">
+            <i class="fas fa-paint-brush"></i>
+          </div>
+          <h3>3D Artist</h3>
+          <p>No prior experience needed! Knowledge of Photoshop or 3D modeling software is welcomed.</p>
+          <ul class="career-requirements">
+            <li>Photoshop or Blender basics</li>
+            <li>Creative mindset</li>
+            <li>Portfolio (if available)</li>
+          </ul>
+          <a href="mailto:arda@lycianforge.com?subject=3D Artist Application" class="btn btn-primary">Apply Now</a>
+        </div>
+        
+        <div class="career-card">
+          <div class="career-icon">
+            <i class="fas fa-music"></i>
+          </div>
+          <h3>Musician</h3>
+          <p>Send us your portfolio and we can consider using your music in our projects!</p>
+          <ul class="career-requirements">
+            <li>Original compositions</li>
+            <li>Game music experience (preferred)</li>
+            <li>Portfolio of work</li>
+          </ul>
+          <a href="mailto:arda@lycianforge.com?subject=Musician Application" class="btn btn-primary">Apply Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img src="logo.png" alt="Lycian Forge" class="footer-logo">
+          <p>Forging legendary gaming experiences</p>
+        </div>
+        
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Navigate</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="games.html">Games</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-column">
+            <h4>Community</h4>
+            <ul>
+              <li><a href="https://github.com/Lycian-Forge" target="_blank">GitHub</a></li>
+              <li><a href="#" target="_blank">Discord</a></li>
+              <li><a href="#" target="_blank">Twitter</a></li>
+              <li><a href="#" target="_blank">YouTube</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-column">
+            <h4>Developers</h4>
+            <ul>
+              <li><a href="https://utility.lycianforge.com/" target="_blank">Utilities Portal</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="footer-social">
+          <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" target="_blank" aria-label="Discord"><i class="fab fa-discord"></i></a>
+          <a href="#" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="https://github.com/Lycian-Forge" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2024 Lycian Forge. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

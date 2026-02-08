@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Contact Us - Lycian Forge</title>
+  <meta name="description" content="Get in touch with Lycian Forge. We'd love to hear from you!">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header id="header">
+    <div class="container header-container">
+      <a href="index.html" class="logo-link">
+        <img src="logo.png" alt="Lycian Forge Logo" class="logo-image">
+        <span class="logo-text">LYCIAN FORGE</span>
+      </a>
+      
+      <nav class="main-nav">
+        <label class="hamburger" id="hamburger-btn" aria-label="Toggle navigation menu">
+          <input type="checkbox" id="menu-checkbox" aria-label="Menu toggle">
+          <svg viewBox="0 0 32 32" aria-hidden="true">
+            <defs>
+              <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#FFD700" />
+                <stop offset="50%" stop-color="#FFA500" />
+                <stop offset="100%" stop-color="#FF6B35" />
+              </linearGradient>
+            </defs>
+            <path class="line" d="M7 16 27 16"></path>
+            <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+          </svg>
+        </label>
+        
+        <ul class="nav-menu" id="menu">
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="games.html">Games <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="games.html#warrior-smith">The Warrior and the Smith</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1 class="page-title">Get In Touch</h1>
+      <p class="page-subtitle">We'd love to hear from you</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Contact Form -->
+        <div class="contact-form-wrapper">
+          <div class="form-header">
+            <i class="fas fa-envelope form-icon"></i>
+            <h2>Send Us a Message</h2>
+            <p>Have a question or want to work together? Drop us a line!</p>
+          </div>
+          
+          <form id="contactForm" class="contact-form">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="John Doe" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" rows="6" placeholder="Tell us what's on your mind..." required></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-block" id="contactSubmitBtn">
+              <span class="btn-text">Send Message</span>
+              <span class="btn-loading" style="display: none;">
+                <i class="fas fa-spinner fa-spin"></i> Sending...
+              </span>
+            </button>
+            
+            <div id="formStatus" class="form-status" style="display: none;"></div>
+          </form>
+        </div>
+        
+        <!-- Contact Info -->
+        <div class="contact-info-wrapper">
+          <div class="contact-info-card">
+            <h3>Contact Information</h3>
+            
+            <div class="info-item">
+              <div class="info-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="info-content">
+                <h4>Email</h4>
+                <a href="mailto:arda@lycianforge.com">arda@lycianforge.com</a>
+              </div>
+            </div>
+            
+            <div class="info-item">
+              <div class="info-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="info-content">
+                <h4>Location</h4>
+                <p>Ankara, Türkiye</p>
+              </div>
+            </div>
+            
+            <div class="info-item">
+              <div class="info-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="info-content">
+                <h4>Response Time</h4>
+                <p>1-2 business days</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="social-connect">
+            <h3>Connect With Us</h3>
+            <div class="social-links-large">
+              <a href="#" target="_blank" class="social-link" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+                <span>Twitter</span>
+              </a>
+              <a href="#" target="_blank" class="social-link" aria-label="Discord">
+                <i class="fab fa-discord"></i>
+                <span>Discord</span>
+              </a>
+              <a href="#" target="_blank" class="social-link" aria-label="YouTube">
+                <i class="fab fa-youtube"></i>
+                <span>YouTube</span>
+              </a>
+              <a href="https://github.com/Lycian-Forge" target="_blank" class="social-link" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="newsletter-section" id="newsletter">
+    <div class="container">
+      <div class="newsletter-box">
+        <div class="newsletter-content">
+          <i class="fas fa-paper-plane newsletter-icon-large"></i>
+          <h2>Stay in the Loop</h2>
+          <p>Get exclusive dev updates, early access opportunities, and behind-the-scenes content delivered straight to your inbox.</p>
+        </div>
+        
+        <form id="newsletterForm" class="newsletter-form-large">
+          <div class="form-group-inline">
+            <input 
+              type="email" 
+              id="newsletter-email" 
+              name="email" 
+              placeholder="your@email.com" 
+              required>
+            <button type="submit" class="btn btn-primary" id="newsletterSubmitBtn">
+              <span class="btn-text">Subscribe</span>
+              <span class="btn-loading" style="display: none;">
+                <i class="fas fa-spinner fa-spin"></i>
+              </span>
+            </button>
+          </div>
+          
+          <div id="newsletterStatus" class="form-status" style="display: none;"></div>
+          <p class="newsletter-note">Unsubscribe anytime. We respect your privacy.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img src="logo.png" alt="Lycian Forge" class="footer-logo">
+          <p>Forging legendary gaming experiences</p>
+        </div>
+        
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Navigate</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="games.html">Games</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-column">
+            <h4>Community</h4>
+            <ul>
+              <li><a href="https://github.com/Lycian-Forge" target="_blank">GitHub</a></li>
+              <li><a href="#" target="_blank">Discord</a></li>
+              <li><a href="#" target="_blank">Twitter</a></li>
+              <li><a href="#" target="_blank">YouTube</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-column">
+            <h4>Developers</h4>
+            <ul>
+              <li><a href="https://utility.lycianforge.com/" target="_blank">Utilities Portal</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="footer-social">
+          <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" target="_blank" aria-label="Discord"><i class="fab fa-discord"></i></a>
+          <a href="#" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="https://github.com/Lycian-Forge" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2024 Lycian Forge. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

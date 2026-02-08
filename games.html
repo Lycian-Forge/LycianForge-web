@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Our Games - Lycian Forge</title>
+  <meta name="description" content="Explore The Warrior and the Smith and our development roadmap at Lycian Forge.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header id="header">
+    <div class="container header-container">
+      <a href="index.html" class="logo-link">
+        <img src="logo.png" alt="Lycian Forge Logo" class="logo-image">
+        <span class="logo-text">LYCIAN FORGE</span>
+      </a>
+      
+      <nav class="main-nav">
+        <label class="hamburger" id="hamburger-btn" aria-label="Toggle navigation menu">
+          <input type="checkbox" id="menu-checkbox" aria-label="Menu toggle">
+          <svg viewBox="0 0 32 32" aria-hidden="true">
+            <defs>
+              <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#FFD700" />
+                <stop offset="50%" stop-color="#FFA500" />
+                <stop offset="100%" stop-color="#FF6B35" />
+              </linearGradient>
+            </defs>
+            <path class="line" d="M7 16 27 16"></path>
+            <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+          </svg>
+        </label>
+        
+        <ul class="nav-menu" id="menu">
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="games.html" class="active">Games <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="games.html#warrior-smith">The Warrior and the Smith</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1 class="page-title">Our Games</h1>
+      <p class="page-subtitle">Epic adventures forged in the fires of imagination</p>
+    </div>
+  </section>
+
+  <!-- Game Detail Section -->
+  <section class="game-detail" id="warrior-smith">
+    <div class="container">
+      <!-- Centered Game Poster -->
+      <div class="game-poster-container">
+        <div class="game-poster-wrapper">
+          <img src="TheWarriorandTheSmith.png" alt="The Warrior and the Smith" class="game-poster-image">
+          <div class="game-badge-large">In Development</div>
+          <div class="poster-overlay">
+            <button class="btn btn-trailer btn-large" id="watchTrailerBtn">
+              <i class="fas fa-play"></i> Watch Trailer
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Game Info Below Poster -->
+      <div class="game-info-centered">
+        <h2 class="game-title">The Warrior and the Smith</h2>
+        
+        <div class="game-meta-tags">
+          <span class="meta-tag"><i class="fas fa-users"></i> Co-op</span>
+          <span class="meta-tag"><i class="fas fa-sync-alt"></i> Roguelike ARPG</span>
+          <span class="meta-tag"><i class="fab fa-steam"></i> Steam</span>
+          <span class="meta-tag"><i class="fas fa-calendar"></i> 2027</span>
+        </div>
+        
+        <div class="game-description-full">
+          <h3>About the Game</h3>
+          <p>
+            When the kingdom's survival hangs by a thread, a Warrior and a Smith set out on an impossible quest to find the legendary Valorstone. This cooperative roguelike adventure requires true teamwork—one player cannot succeed without the other.
+          </p>
+          <p>
+            <strong>The Warrior</strong> ventures into treacherous environments, gathering crucial resources, battling through enemy hordes, and defending the base from relentless attacks. Meanwhile, <strong>the Smith</strong> transforms raw materials into devastating weapons, powerful spells, and robust defensive structures, ensuring both players can withstand the challenges ahead.
+          </p>
+          <p>
+            Each run presents unique dangers across diverse environments filled with cunning foes. Coordinate your strategies, adapt to ever-changing threats, and push deeper into hostile territory. The fate of the kingdom rests on your cooperation.
+          </p>
+          
+          <h3>Key Features</h3>
+            <div class="features-grid">
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <i class="fas fa-users"></i>
+                </div>
+                <h4>Cooperative-Only Gameplay</h4>
+                <p class="feature-description">Designed for two players working in perfect harmony</p>
+                <div class="hover-indicator">
+                  <i class="fas fa-hand-pointer"></i>
+                </div>
+              </div>
+              
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <i class="fas fa-user-shield"></i>
+                </div>
+                <h4>Asymmetric Roles</h4>
+                <p class="feature-description">Distinct Warrior and Smith playstyles with unique abilities</p>
+                <div class="hover-indicator">
+                  <i class="fas fa-hand-pointer"></i>
+                </div>
+              </div>
+              
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <i class="fas fa-sync-alt"></i>
+                </div>
+                <h4>Roguelike ARPG</h4>
+                <p class="feature-description">Every playthrough offers fresh challenges and rewards</p>
+                <div class="hover-indicator">
+                  <i class="fas fa-hand-pointer"></i>
+                </div>
+              </div>
+              
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <i class="fas fa-cogs"></i>
+                </div>
+                <h4>Countless Customizations</h4>
+                <p class="feature-description">Deep weapon crafting, spell combinations, and base upgrades</p>
+                <div class="hover-indicator">
+                  <i class="fas fa-hand-pointer"></i>
+                </div>
+              </div>
+              
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <i class="fas fa-mountain"></i>
+                </div>
+                <h4>Multiple Environments</h4>
+                <p class="feature-description">Traverse diverse landscapes, each with unique enemies and resources</p>
+                <div class="hover-indicator">
+                  <i class="fas fa-hand-pointer"></i>
+                </div>
+              </div>
+              
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <i class="fas fa-shield-alt"></i>
+                </div>
+                <h4>Base Defense</h4>
+                <p class="feature-description">Fortify your sanctuary against waves of enemies</p>
+                <div class="hover-indicator">
+                  <i class="fas fa-hand-pointer"></i>
+                </div>
+              </div>
+              
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <i class="fas fa-dragon"></i>
+                </div>
+                <h4>Epic Boss Encounters</h4>
+                <p class="feature-description">Test your coordination against formidable adversaries</p>
+                <div class="hover-indicator">
+                  <i class="fas fa-hand-pointer"></i>
+                </div>
+              </div>
+              
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <i class="fas fa-music"></i>
+                </div>
+                <h4>Original Soundtrack</h4>
+                <p class="feature-description">Immersive music composed specifically for your journey</p>
+                <div class="hover-indicator">
+                  <i class="fas fa-hand-pointer"></i>
+                </div>
+              </div>
+            </div>
+            
+            <h3>Platform</h3>
+            <p>The Warrior and the Smith will be available exclusively on <strong>Steam</strong> for PC.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roadmap Section -->
+  <section class="roadmap-section">
+    <div class="container">
+      <div class="section-header centered">
+        <span class="section-tag">The Journey</span>
+        <h2 class="section-title">Development Roadmap</h2>
+        <p class="section-description">Follow our progress as we forge this epic adventure</p>
+      </div>
+      
+      <div class="roadmap-timeline">
+        <div class="timeline-line"></div>
+        
+        <div class="roadmap-item completed">
+          <div class="roadmap-icon">
+            <i class="fas fa-flag-checkered"></i>
+          </div>
+          <div class="roadmap-content">
+            <span class="roadmap-date">Q1 2024</span>
+            <h3>Studio Founded</h3>
+            <p>Lycian Forge was born! Three engineers decided to turn their passion for gaming into reality.</p>
+            <span class="roadmap-status completed-status">✓ Completed</span>
+          </div>
+        </div>
+        
+        <div class="roadmap-item completed">
+          <div class="roadmap-icon">
+            <i class="fas fa-lightbulb"></i>
+          </div>
+          <div class="roadmap-content">
+            <span class="roadmap-date">Q2-Q3 2024</span>
+            <h3>Pre-Production & Concept</h3>
+            <p>Extensive planning, concept art, and team building for The Warrior and the Smith.</p>
+            <span class="roadmap-status completed-status">✓ Completed</span>
+          </div>
+        </div>
+        
+        <div class="roadmap-item active">
+          <div class="roadmap-icon">
+            <i class="fas fa-hammer"></i>
+          </div>
+          <div class="roadmap-content">
+            <span class="roadmap-date">Q4 2025</span>
+            <h3>Active Development</h3>
+            <p>Full production: building gameplay mechanics, crafting systems, environments, and bringing the world to life.</p>
+            <span class="roadmap-status active-status">🔥 In Progress</span>
+          </div>
+        </div>
+        
+        <div class="roadmap-item upcoming">
+          <div class="roadmap-icon">
+            <i class="fas fa-flask"></i>
+          </div>
+          <div class="roadmap-content">
+            <span class="roadmap-date">Q4 2026</span>
+            <h3>Alpha Testing</h3>
+            <p>Internal testing phase with focus on gameplay balancing, bug fixes, and performance optimization.</p>
+            <span class="roadmap-status upcoming-status">⏳ Upcoming</span>
+          </div>
+        </div>
+        
+        <div class="roadmap-item upcoming">
+          <div class="roadmap-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <div class="roadmap-content">
+            <span class="roadmap-date">Q1 2027</span>
+            <h3>Beta & Community</h3>
+            <p>Closed beta for community members, Steam page launch, and wishlist campaign begins.</p>
+            <span class="roadmap-status upcoming-status">⏳ Upcoming</span>
+          </div>
+        </div>
+        
+        <div class="roadmap-item upcoming">
+          <div class="roadmap-icon">
+            <i class="fas fa-rocket"></i>
+          </div>
+          <div class="roadmap-content">
+            <span class="roadmap-date">2027</span>
+            <h3>Launch</h3>
+            <p>The moment we've all been waiting for - our debut game releases to the world!</p>
+            <span class="roadmap-status target-status">🎯 Target</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="roadmap-footer">
+        <p>...and many more adventures to come</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stay Updated Section -->
+  <section class="stay-updated">
+    <div class="container">
+      <div class="update-box">
+        <i class="fas fa-bell update-icon"></i>
+        <h2>Stay Updated</h2>
+        <p>Get the latest news, development updates, and exclusive content delivered to your inbox.</p>
+        <a href="contact.html#newsletter" class="btn btn-primary">Subscribe to Newsletter</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img src="logo.png" alt="Lycian Forge" class="footer-logo">
+          <p>Forging legendary gaming experiences</p>
+        </div>
+        
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Navigate</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="games.html">Games</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-column">
+            <h4>Community</h4>
+            <ul>
+              <li><a href="https://github.com/Lycian-Forge" target="_blank">GitHub</a></li>
+              <li><a href="#" target="_blank">Discord</a></li>
+              <li><a href="#" target="_blank">Twitter</a></li>
+              <li><a href="#" target="_blank">YouTube</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-column">
+            <h4>Developers</h4>
+            <ul>
+              <li><a href="https://utility.lycianforge.com/" target="_blank">Utilities Portal</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="footer-social">
+          <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" target="_blank" aria-label="Discord"><i class="fab fa-discord"></i></a>
+          <a href="#" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="https://github.com/Lycian-Forge" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2024 Lycian Forge. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Trailer Modal -->
+  <div class="trailer-modal" id="trailerModal">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+      <button class="modal-close" id="closeTrailer">&times;</button>
+      <div class="video-wrapper">
+        <iframe 
+          id="trailerIframe"
+          src="" 
+          title="The Warrior and the Smith Trailer"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
