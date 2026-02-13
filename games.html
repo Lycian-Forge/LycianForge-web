@@ -17,7 +17,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=Raleway:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Loading Screen -->
@@ -60,13 +60,13 @@
         </label>
         
         <ul class="nav-menu" id="menu">
-          <li><a href="index.html">Home</a></li>
           <li class="dropdown">
             <a href="games.html" class="active">Games <i class="fas fa-chevron-down"></i></a>
             <ul class="dropdown-menu">
               <li><a href="games.html#warrior-smith">The Warrior and the Smith</a></li>
             </ul>
           </li>
+          <li><a href="news.html">News</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -76,11 +76,14 @@
 
   <!-- Page Header -->
   <section class="page-header">
+    <div class="page-header-parallax parallax-bg"></div>
     <div class="container">
       <h1 class="page-title">Our Games</h1>
       <p class="page-subtitle">Epic adventures forged in the fires of imagination</p>
     </div>
   </section>
+
+  <div class="section-divider"></div>
 
   <!-- Game Detail Section -->
   <section class="game-detail" id="warrior-smith">
@@ -124,100 +127,75 @@
           <h3>Key Features</h3>
             <div class="features-grid">
               <div class="feature-card">
-                <div class="feature-icon">
-                  <i class="fas fa-users"></i>
+                <div class="feature-card-inner">
+                  <div class="feature-icon"><i class="fas fa-users"></i></div>
+                  <h4>Cooperative-Only Gameplay</h4>
                 </div>
-                <h4>Cooperative-Only Gameplay</h4>
                 <p class="feature-description">Designed for two players working in perfect harmony</p>
-                <div class="hover-indicator">
-                  <i class="fas fa-hand-pointer"></i>
-                </div>
               </div>
               
               <div class="feature-card">
-                <div class="feature-icon">
-                  <i class="fas fa-user-shield"></i>
+                <div class="feature-card-inner">
+                  <div class="feature-icon"><i class="fas fa-user-shield"></i></div>
+                  <h4>Asymmetric Roles</h4>
                 </div>
-                <h4>Asymmetric Roles</h4>
                 <p class="feature-description">Distinct Warrior and Smith playstyles with unique abilities</p>
-                <div class="hover-indicator">
-                  <i class="fas fa-hand-pointer"></i>
-                </div>
               </div>
               
               <div class="feature-card">
-                <div class="feature-icon">
-                  <i class="fas fa-sync-alt"></i>
+                <div class="feature-card-inner">
+                  <div class="feature-icon"><i class="fas fa-sync-alt"></i></div>
+                  <h4>Roguelike ARPG</h4>
                 </div>
-                <h4>Roguelike ARPG</h4>
                 <p class="feature-description">Every playthrough offers fresh challenges and rewards</p>
-                <div class="hover-indicator">
-                  <i class="fas fa-hand-pointer"></i>
-                </div>
               </div>
               
               <div class="feature-card">
-                <div class="feature-icon">
-                  <i class="fas fa-cogs"></i>
+                <div class="feature-card-inner">
+                  <div class="feature-icon"><i class="fas fa-cogs"></i></div>
+                  <h4>Countless Customizations</h4>
                 </div>
-                <h4>Countless Customizations</h4>
                 <p class="feature-description">Deep weapon crafting, spell combinations, and base upgrades</p>
-                <div class="hover-indicator">
-                  <i class="fas fa-hand-pointer"></i>
-                </div>
               </div>
               
               <div class="feature-card">
-                <div class="feature-icon">
-                  <i class="fas fa-mountain"></i>
+                <div class="feature-card-inner">
+                  <div class="feature-icon"><i class="fas fa-mountain"></i></div>
+                  <h4>Multiple Environments</h4>
                 </div>
-                <h4>Multiple Environments</h4>
                 <p class="feature-description">Traverse diverse landscapes, each with unique enemies and resources</p>
-                <div class="hover-indicator">
-                  <i class="fas fa-hand-pointer"></i>
-                </div>
               </div>
               
               <div class="feature-card">
-                <div class="feature-icon">
-                  <i class="fas fa-shield-alt"></i>
+                <div class="feature-card-inner">
+                  <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                  <h4>Base Defense</h4>
                 </div>
-                <h4>Base Defense</h4>
                 <p class="feature-description">Fortify your sanctuary against waves of enemies</p>
-                <div class="hover-indicator">
-                  <i class="fas fa-hand-pointer"></i>
-                </div>
               </div>
               
               <div class="feature-card">
-                <div class="feature-icon">
-                  <i class="fas fa-dragon"></i>
+                <div class="feature-card-inner">
+                  <div class="feature-icon"><i class="fas fa-dragon"></i></div>
+                  <h4>Epic Boss Encounters</h4>
                 </div>
-                <h4>Epic Boss Encounters</h4>
                 <p class="feature-description">Test your coordination against formidable adversaries</p>
-                <div class="hover-indicator">
-                  <i class="fas fa-hand-pointer"></i>
-                </div>
               </div>
               
               <div class="feature-card">
-                <div class="feature-icon">
-                  <i class="fas fa-music"></i>
+                <div class="feature-card-inner">
+                  <div class="feature-icon"><i class="fas fa-music"></i></div>
+                  <h4>Original Soundtrack</h4>
                 </div>
-                <h4>Original Soundtrack</h4>
                 <p class="feature-description">Immersive music composed specifically for your journey</p>
-                <div class="hover-indicator">
-                  <i class="fas fa-hand-pointer"></i>
-                </div>
               </div>
             </div>
-            
-            <h3>Platform</h3>
-            <p>The Warrior and the Smith will be available exclusively on <strong>Steam</strong> for PC.</p>
         </div>
       </div>
     </div>
   </section>
+
+  <div class="section-divider"></div>
 
   <!-- Roadmap Section -->
   <section class="roadmap-section">
@@ -310,17 +288,6 @@
     </div>
   </section>
 
-  <!-- Stay Updated Section -->
-  <section class="stay-updated">
-    <div class="container">
-      <div class="update-box">
-        <i class="fas fa-bell update-icon"></i>
-        <h2>Stay Updated</h2>
-        <p>Get the latest news, development updates, and exclusive content delivered to your inbox.</p>
-        <a href="contact.html#newsletter" class="btn btn-primary">Subscribe to Newsletter</a>
-      </div>
-    </div>
-  </section>
 
   <!-- Footer -->
   <footer class="footer">
@@ -337,6 +304,7 @@
             <ul>
               <li><a href="index.html">Home</a></li>
               <li><a href="games.html">Games</a></li>
+              <li><a href="news.html">News</a></li>
               <li><a href="about.html">About</a></li>
               <li><a href="contact.html">Contact</a></li>
             </ul>

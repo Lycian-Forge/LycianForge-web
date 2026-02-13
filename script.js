@@ -82,11 +82,15 @@ document.addEventListener("DOMContentLoaded", function () {
 window.addEventListener('scroll', function() {
   const header = document.getElementById('header');
   if (window.scrollY > 50) {
-    header.style.background = 'rgba(10, 10, 20, 0.98)';
-    header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.3)';
+    header.style.background = 'rgba(10, 10, 20, 0.4)';
+    header.style.backdropFilter = 'blur(6px)';
+    header.style.borderBottom = '1px solid rgba(255, 215, 0, 0.05)';
+    header.style.boxShadow = 'none';
   } else {
     header.style.background = 'rgba(10, 10, 20, 0.95)';
-    header.style.boxShadow = 'none';
+    header.style.backdropFilter = 'blur(10px)';
+    header.style.borderBottom = '1px solid rgba(255, 215, 0, 0.1)';
+    header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.3)';
   }
 });
 
@@ -363,20 +367,47 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // ===========================
-// Parallax Effect for Hero
+// Parallax Effect for Hero and Page Header
 // ===========================
 window.addEventListener('scroll', function() {
+  const scrolled = window.scrollY;
+  
+  // Parallax for hero section
   const hero = document.querySelector('.hero');
   if (hero) {
-    const scrolled = window.scrollY;
     const heroHeight = hero.offsetHeight;
     
     // Only apply parallax when hero is visible
     if (scrolled < heroHeight) {
-      const parallaxBg = document.querySelector('.parallax-bg');
+      const heroParallaxBg = hero.querySelector('.parallax-bg');
       
-      if (parallaxBg) {
-        parallaxBg.style.transform = `translateY(${scrolled * 0.5}px)`;
+      if (heroParallaxBg) {
+        heroParallaxBg.style.transform = `translateY(${scrolled * 0.5}px)`;
+      }
+    }
+  }
+  
+  // Parallax for page-header section
+  const pageHeader = document.querySelector('.page-header');
+  if (pageHeader) {
+    const pageHeaderParallaxBg = pageHeader.querySelector('.page-header-parallax');
+    
+    if (pageHeaderParallaxBg) {
+      const pageHeaderTop = pageHeader.offsetTop;
+      const pageHeaderHeight = pageHeader.offsetHeight;
+      const windowHeight = window.innerHeight;
+      
+      // Calculate when section is in viewport
+      const sectionStart = pageHeaderTop - windowHeight;
+      const sectionEnd = pageHeaderTop + pageHeaderHeight;
+      
+      if (scrolled >= sectionStart && scrolled <= sectionEnd) {
+        // Calculate parallax offset - background moves slower than scroll
+        const parallaxOffset = (scrolled - pageHeaderTop) * 0.5;
+        pageHeaderParallaxBg.style.transform = `translateY(${parallaxOffset}px)`;
+      } else if (scrolled < sectionStart) {
+        // Reset when above section
+        pageHeaderParallaxBg.style.transform = 'translateY(0px)';
       }
     }
   }

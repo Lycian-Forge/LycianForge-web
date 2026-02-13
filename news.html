@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>News - Lycian Forge</title>
+  <meta name="description" content="Latest news and updates from Lycian Forge. Stay informed about our game development progress and studio announcements.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=Raleway:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div id="loader-wrapper">
+    <div class="loader">
+      <div class="cell d-0"></div>
+      <div class="cell d-1"></div>
+      <div class="cell d-2"></div>
+      <div class="cell d-1"></div>
+      <div class="cell d-2"></div>
+      <div class="cell d-2"></div>
+      <div class="cell d-3"></div>
+      <div class="cell d-3"></div>
+      <div class="cell d-4"></div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header id="header">
+    <div class="container header-container">
+      <a href="index.html" class="logo-link">
+        <img src="logo.png" alt="Lycian Forge Logo" class="logo-image">
+        <span class="logo-text">LYCIAN FORGE</span>
+      </a>
+      
+      <nav class="main-nav">
+        <label class="hamburger" id="hamburger-btn" aria-label="Toggle navigation menu">
+          <input type="checkbox" id="menu-checkbox" aria-label="Menu toggle">
+          <svg viewBox="0 0 32 32" aria-hidden="true">
+            <defs>
+              <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#FFD700" />
+                <stop offset="50%" stop-color="#FFA500" />
+                <stop offset="100%" stop-color="#FF6B35" />
+              </linearGradient>
+            </defs>
+            <path class="line" d="M7 16 27 16"></path>
+            <path class="line line-top-bottom" d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22"></path>
+          </svg>
+        </label>
+        
+        <ul class="nav-menu" id="menu">
+          <li class="dropdown">
+            <a href="games.html">Games <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="games.html#warrior-smith">The Warrior and the Smith</a></li>
+            </ul>
+          </li>
+          <li><a href="news.html" class="active">News</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="page-header-parallax news-hero-parallax"></div>
+    <div class="container">
+      <h1 class="page-title">News & Updates</h1>
+      <p class="page-subtitle">The latest from the forge</p>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- News List Section -->
+  <section class="news-section">
+    <div class="container">
+
+      <!-- News Item 1 -->
+      <article class="news-item">
+        <div class="news-date">
+          <span class="news-day">10</span>
+          <span class="news-month">Feb</span>
+          <span class="news-year">2026</span>
+        </div>
+        <div class="news-content">
+          <div class="news-tag"><i class="fas fa-hammer"></i> Development Update</div>
+          <h2 class="news-title">Active Development Milestone: The Warrior and the Smith Enters Full Production</h2>
+          <p class="news-excerpt">
+            We're thrilled to announce that <strong>The Warrior and the Smith</strong> has officially entered full production! Our team of five passionate developers has been hard at work building out the core gameplay systems, including the asymmetric cooperative mechanics that define our debut title. The Warrior's combat system and the Smith's crafting & base-building loops are coming together beautifully. With our target launch on <strong>Steam in 2027</strong>, every roguelike run is shaping up to deliver fresh challenges and meaningful cooperation. Stay tuned for more details on environments, boss encounters, and the original soundtrack.
+          </p>
+          <div class="news-tags-list">
+            <span class="news-badge">The Warrior and the Smith</span>
+            <span class="news-badge">Co-op</span>
+            <span class="news-badge">Roguelike ARPG</span>
+          </div>
+        </div>
+      </article>
+
+      <div class="section-divider"></div>
+
+      <!-- News Item 2 -->
+      <article class="news-item">
+        <div class="news-date">
+          <span class="news-day">15</span>
+          <span class="news-month">Mar</span>
+          <span class="news-year">2024</span>
+        </div>
+        <div class="news-content">
+          <div class="news-tag"><i class="fas fa-flag"></i> Announcement</div>
+          <h2 class="news-title">Lycian Forge is Born: Three Engineers Unite to Build Games</h2>
+          <p class="news-excerpt">
+            What started as late-night brainstorming sessions between three engineering friends has become a reality — <strong>Lycian Forge</strong> is officially founded! Our name embodies our philosophy: like skilled craftsmen at the anvil, we forge our games through dedication, iteration, and an unwavering commitment to quality. Our mission is to create games that challenge players, emphasize teamwork, and deliver experiences worth sharing with friends. We believe the best games emerge from genuine passion and creative freedom, and as an independent studio, we have the liberty to take risks and experiment with innovative mechanics. The journey begins now.
+          </p>
+          <div class="news-tags-list">
+            <span class="news-badge">Studio Launch</span>
+            <span class="news-badge">Indie</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img src="logo.png" alt="Lycian Forge" class="footer-logo">
+          <p>Forging legendary gaming experiences</p>
+        </div>
+        
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Navigate</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="games.html">Games</a></li>
+              <li><a href="news.html">News</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-column">
+            <h4>Community</h4>
+            <ul>
+              <li><a href="https://github.com/Lycian-Forge" target="_blank">GitHub</a></li>
+              <li><a href="#" target="_blank">Discord</a></li>
+              <li><a href="#" target="_blank">Twitter</a></li>
+              <li><a href="#" target="_blank">YouTube</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-column">
+            <h4>Developers</h4>
+            <ul>
+              <li><a href="https://utility.lycianforge.com/" target="_blank">Utilities Portal</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="footer-social">
+          <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" target="_blank" aria-label="Discord"><i class="fab fa-discord"></i></a>
+          <a href="#" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="https://github.com/Lycian-Forge" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2024 Lycian Forge. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
